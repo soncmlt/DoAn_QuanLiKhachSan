@@ -22,7 +22,7 @@ namespace DoAn_QuanLiKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmDangNhap());
+            Application.Run(new FormMain());
         }
     }
 }
