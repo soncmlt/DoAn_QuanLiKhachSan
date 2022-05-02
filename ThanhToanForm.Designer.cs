@@ -29,8 +29,8 @@ namespace DoAn_QuanLiKhachSan
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dgv_DSThue = new System.Windows.Forms.DataGridView();
             this.col_MaThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,17 +40,17 @@ namespace DoAn_QuanLiKhachSan
             this.col_SoNgayThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TongTien = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.btn_ThanhToan = new System.Windows.Forms.Button();
             this.txt_TenPhong = new DevExpress.XtraEditors.TextEdit();
             this.cbo_HinhThucThue = new DevExpress.XtraEditors.ComboBoxEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.btn_ThanhToan = new System.Windows.Forms.Button();
+            this.txt_MaKH = new DevExpress.XtraEditors.TextEdit();
+            this.txt_ThoiGianThue = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSThue)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TenPhong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_HinhThucThue.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ThoiGianThue.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -66,10 +66,10 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel1.Controls.Add(this.dgv_DSThue, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.txt_TenPhong, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.cbo_HinhThucThue, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.btn_ThanhToan, 5, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textEdit1, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.textEdit2, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txt_ThoiGianThue, 4, 1);
+            this.tableLayoutPanel1.Controls.Add(this.cbo_HinhThucThue, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txt_MaKH, 2, 1);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -86,14 +86,14 @@ namespace DoAn_QuanLiKhachSan
             this.dgv_DSThue.AllowUserToDeleteRows = false;
             this.dgv_DSThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_DSThue.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_DSThue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_DSThue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_DSThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_DSThue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_MaThue,
@@ -109,8 +109,8 @@ namespace DoAn_QuanLiKhachSan
             this.dgv_DSThue.Margin = new System.Windows.Forms.Padding(16);
             this.dgv_DSThue.Name = "dgv_DSThue";
             this.dgv_DSThue.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgv_DSThue.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgv_DSThue.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_DSThue.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSThue.Size = new System.Drawing.Size(1295, 561);
             this.dgv_DSThue.TabIndex = 6;
@@ -163,31 +163,6 @@ namespace DoAn_QuanLiKhachSan
             this.label1.Text = "Thanh toán";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textEdit1
-            // 
-            this.textEdit1.Enabled = false;
-            this.textEdit1.Location = new System.Drawing.Point(800, 63);
-            this.textEdit1.MaximumSize = new System.Drawing.Size(1000000, 50);
-            this.textEdit1.MinimumSize = new System.Drawing.Size(0, 25);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AutoHeight = false;
-            this.textEdit1.Size = new System.Drawing.Size(254, 44);
-            this.textEdit1.TabIndex = 4;
-            this.textEdit1.ToolTip = "Tên phòng";
-            // 
-            // btn_ThanhToan
-            // 
-            this.btn_ThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
-            this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_ThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThanhToan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_ThanhToan.Location = new System.Drawing.Point(1060, 63);
-            this.btn_ThanhToan.Name = "btn_ThanhToan";
-            this.btn_ThanhToan.Size = new System.Drawing.Size(254, 44);
-            this.btn_ThanhToan.TabIndex = 3;
-            this.btn_ThanhToan.Text = "Thanh toán";
-            this.btn_ThanhToan.UseVisualStyleBackColor = false;
-            // 
             // txt_TenPhong
             // 
             this.txt_TenPhong.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -202,8 +177,7 @@ namespace DoAn_QuanLiKhachSan
             // 
             // cbo_HinhThucThue
             // 
-            this.cbo_HinhThucThue.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbo_HinhThucThue.Location = new System.Drawing.Point(280, 63);
+            this.cbo_HinhThucThue.Location = new System.Drawing.Point(540, 63);
             this.cbo_HinhThucThue.Name = "cbo_HinhThucThue";
             this.cbo_HinhThucThue.Properties.AutoHeight = false;
             this.cbo_HinhThucThue.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
@@ -212,17 +186,40 @@ namespace DoAn_QuanLiKhachSan
             this.cbo_HinhThucThue.TabIndex = 7;
             this.cbo_HinhThucThue.ToolTip = "Hình thức thuê";
             // 
-            // textEdit2
+            // btn_ThanhToan
             // 
-            this.textEdit2.Enabled = false;
-            this.textEdit2.Location = new System.Drawing.Point(540, 63);
-            this.textEdit2.MaximumSize = new System.Drawing.Size(1000000, 50);
-            this.textEdit2.MinimumSize = new System.Drawing.Size(0, 25);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.AutoHeight = false;
-            this.textEdit2.Size = new System.Drawing.Size(254, 44);
-            this.textEdit2.TabIndex = 4;
-            this.textEdit2.ToolTip = "Tên phòng";
+            this.btn_ThanhToan.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(53)))), ((int)(((byte)(62)))));
+            this.btn_ThanhToan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ThanhToan.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThanhToan.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_ThanhToan.Location = new System.Drawing.Point(1060, 63);
+            this.btn_ThanhToan.Name = "btn_ThanhToan";
+            this.btn_ThanhToan.Size = new System.Drawing.Size(254, 44);
+            this.btn_ThanhToan.TabIndex = 3;
+            this.btn_ThanhToan.Text = "Thanh toán";
+            this.btn_ThanhToan.UseVisualStyleBackColor = false;
+            // 
+            // txt_MaKH
+            // 
+            this.txt_MaKH.Location = new System.Drawing.Point(280, 63);
+            this.txt_MaKH.MaximumSize = new System.Drawing.Size(1000000, 50);
+            this.txt_MaKH.MinimumSize = new System.Drawing.Size(0, 25);
+            this.txt_MaKH.Name = "txt_MaKH";
+            this.txt_MaKH.Properties.AutoHeight = false;
+            this.txt_MaKH.Size = new System.Drawing.Size(254, 44);
+            this.txt_MaKH.TabIndex = 4;
+            this.txt_MaKH.ToolTip = "Mã khách hàng";
+            // 
+            // txt_ThoiGianThue
+            // 
+            this.txt_ThoiGianThue.Location = new System.Drawing.Point(800, 63);
+            this.txt_ThoiGianThue.MaximumSize = new System.Drawing.Size(1000000, 50);
+            this.txt_ThoiGianThue.MinimumSize = new System.Drawing.Size(0, 25);
+            this.txt_ThoiGianThue.Name = "txt_ThoiGianThue";
+            this.txt_ThoiGianThue.Properties.AutoHeight = false;
+            this.txt_ThoiGianThue.Size = new System.Drawing.Size(254, 44);
+            this.txt_ThoiGianThue.TabIndex = 4;
+            this.txt_ThoiGianThue.ToolTip = "Thời gian thuê";
             // 
             // ThanhToanForm
             // 
@@ -235,10 +232,10 @@ namespace DoAn_QuanLiKhachSan
             this.Text = "ThanhToanForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSThue)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_TenPhong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_HinhThucThue.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ThoiGianThue.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -247,7 +244,7 @@ namespace DoAn_QuanLiKhachSan
 
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit txt_MaKH;
         private System.Windows.Forms.Button btn_ThanhToan;
         private System.Windows.Forms.DataGridView dgv_DSThue;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaThue;
@@ -258,6 +255,6 @@ namespace DoAn_QuanLiKhachSan
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TongTien;
         private DevExpress.XtraEditors.TextEdit txt_TenPhong;
         private DevExpress.XtraEditors.ComboBoxEdit cbo_HinhThucThue;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit txt_ThoiGianThue;
     }
 }
