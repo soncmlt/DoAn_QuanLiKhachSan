@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using DAO_BLL;
+//using DAO_BLL;
 namespace DoAn_QuanLiKhachSan
 {
     public partial class QuanLiNhanVienForm : Form
@@ -15,8 +15,8 @@ namespace DoAn_QuanLiKhachSan
         public QuanLiNhanVienForm()
         {
             InitializeComponent();
-            NhanVienDAO objDAO = new NhanVienDAO();
-            dgv_DSNguoiDung.DataSource = objDAO.GetALLNhanVien();
+            //NhanVienDAO objDAO = new NhanVienDAO();
+            //dgv_DSNguoiDung.DataSource = objDAO.GetALLNhanVien();
         }
     }
 }

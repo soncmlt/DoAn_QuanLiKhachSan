@@ -32,7 +32,6 @@ namespace DoAn_QuanLiKhachSan
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.txt_TenPhong = new DevExpress.XtraEditors.TextEdit();
             this.cbo_LoaiPhong = new DevExpress.XtraEditors.ComboBoxEdit();
             this.cbo_TrangThai = new DevExpress.XtraEditors.ComboBoxEdit();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,11 +43,12 @@ namespace DoAn_QuanLiKhachSan
             this.col_Ten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_Loai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txt_TenPhong = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_TenPhong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_LoaiPhong.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_TrangThai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenPhong.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -77,18 +77,6 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1327, 703);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // txt_TenPhong
-            // 
-            this.txt_TenPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_TenPhong.Location = new System.Drawing.Point(258, 63);
-            this.txt_TenPhong.MaximumSize = new System.Drawing.Size(1000000, 50);
-            this.txt_TenPhong.MinimumSize = new System.Drawing.Size(0, 25);
-            this.txt_TenPhong.Name = "txt_TenPhong";
-            this.txt_TenPhong.Properties.AutoHeight = false;
-            this.txt_TenPhong.Size = new System.Drawing.Size(266, 34);
-            this.txt_TenPhong.TabIndex = 0;
-            this.txt_TenPhong.ToolTip = "Tên phòng";
             // 
             // cbo_LoaiPhong
             // 
@@ -195,8 +183,9 @@ namespace DoAn_QuanLiKhachSan
             this.dgv_DSPhong.Margin = new System.Windows.Forms.Padding(16);
             this.dgv_DSPhong.Name = "dgv_DSPhong";
             this.dgv_DSPhong.ReadOnly = true;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(10)))), ((int)(((byte)(39)))), ((int)(((byte)(39)))));
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgv_DSPhong.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgv_DSPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_DSPhong.Size = new System.Drawing.Size(1295, 521);
             this.dgv_DSPhong.TabIndex = 4;
             // 
@@ -224,6 +213,18 @@ namespace DoAn_QuanLiKhachSan
             this.col_TrangThai.Name = "col_TrangThai";
             this.col_TrangThai.ReadOnly = true;
             // 
+            // txt_TenPhong
+            // 
+            this.txt_TenPhong.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_TenPhong.Location = new System.Drawing.Point(258, 63);
+            this.txt_TenPhong.MaximumSize = new System.Drawing.Size(1000000, 50);
+            this.txt_TenPhong.MinimumSize = new System.Drawing.Size(0, 25);
+            this.txt_TenPhong.Name = "txt_TenPhong";
+            this.txt_TenPhong.Properties.AutoHeight = false;
+            this.txt_TenPhong.Size = new System.Drawing.Size(266, 34);
+            this.txt_TenPhong.TabIndex = 0;
+            this.txt_TenPhong.ToolTip = "Tên phòng";
+            // 
             // QuanLiPhongForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -234,10 +235,10 @@ namespace DoAn_QuanLiKhachSan
             this.Name = "QuanLiPhongForm";
             this.Text = "QuanLiPhongForm";
             this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_TenPhong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_LoaiPhong.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_TrangThai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenPhong.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
