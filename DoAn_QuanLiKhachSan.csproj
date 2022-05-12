@@ -151,11 +151,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BO\BO.csproj">
+    <ProjectReference Include="BO\BO.csproj">
       <Project>{e0953f92-0066-4519-b8cb-00a2a3ed219b}</Project>
       <Name>BO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAO_BLL\DAO_BLL.csproj">
+    <ProjectReference Include="DAO_BLL\DAO_BLL.csproj">
       <Project>{a709f4c4-b97f-40dd-bb1f-483d7951a938}</Project>
       <Name>DAO_BLL</Name>
     </ProjectReference>

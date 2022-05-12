@@ -45,8 +45,8 @@ namespace DoAn_QuanLiKhachSan
             this.btn_Xoa = new System.Windows.Forms.Button();
             this.btn_Sua = new System.Windows.Forms.Button();
             this.btn_Them = new System.Windows.Forms.Button();
-            this.txt_MatKhau = new DevExpress.XtraEditors.TextEdit();
             this.label1 = new System.Windows.Forms.Label();
+            this.txt_MatKhau = new DevExpress.XtraEditors.TextEdit();
             this.cbo_LoaiNV = new DevExpress.XtraEditors.ComboBoxEdit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_GioiTinh.Properties)).BeginInit();
@@ -245,18 +245,6 @@ namespace DoAn_QuanLiKhachSan
             this.btn_Them.Text = "Thêm";
             this.btn_Them.UseVisualStyleBackColor = false;
             // 
-            // txt_MatKhau
-            // 
-            this.txt_MatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_MatKhau.Location = new System.Drawing.Point(1056, 62);
-            this.txt_MatKhau.MaximumSize = new System.Drawing.Size(1000000, 50);
-            this.txt_MatKhau.MinimumSize = new System.Drawing.Size(0, 25);
-            this.txt_MatKhau.Name = "txt_MatKhau";
-            this.txt_MatKhau.Properties.AutoHeight = false;
-            this.txt_MatKhau.Size = new System.Drawing.Size(254, 35);
-            this.txt_MatKhau.TabIndex = 6;
-            this.txt_MatKhau.ToolTip = "Mật khẩu";
-            // 
             // label1
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.label1, 4);
@@ -269,6 +257,18 @@ namespace DoAn_QuanLiKhachSan
             this.label1.Text = "Quản lí tài khoản người dùng";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // txt_MatKhau
+            // 
+            this.txt_MatKhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_MatKhau.Location = new System.Drawing.Point(1056, 62);
+            this.txt_MatKhau.MaximumSize = new System.Drawing.Size(1000000, 50);
+            this.txt_MatKhau.MinimumSize = new System.Drawing.Size(0, 25);
+            this.txt_MatKhau.Name = "txt_MatKhau";
+            this.txt_MatKhau.Properties.AutoHeight = false;
+            this.txt_MatKhau.Size = new System.Drawing.Size(254, 35);
+            this.txt_MatKhau.TabIndex = 6;
+            this.txt_MatKhau.ToolTip = "Mật khẩu";
+            // 
             // cbo_LoaiNV
             // 
             this.cbo_LoaiNV.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -279,7 +279,7 @@ namespace DoAn_QuanLiKhachSan
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.cbo_LoaiNV.Size = new System.Drawing.Size(254, 35);
             this.cbo_LoaiNV.TabIndex = 1;
-            this.cbo_LoaiNV.ToolTip = "Giới tính";
+            this.cbo_LoaiNV.ToolTip = "Loại nhân viên";
             // 
             // QuanLiNhanVienForm
             // 
