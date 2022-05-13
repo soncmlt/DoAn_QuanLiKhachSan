@@ -881,6 +881,14 @@ namespace DAO_BLL
 		
 		private string _TenLoai;
 		
+		private System.Nullable<int> _SoGiuong;
+		
+		private System.Nullable<int> _GiaGio;
+		
+		private System.Nullable<int> _GiaNgay;
+		
+		private System.Nullable<int> _GiaThang;
+		
 		private EntitySet<tbl_Phong> _tbl_Phongs;
 		
     #region Extensibility Method Definitions
@@ -891,6 +899,14 @@ namespace DAO_BLL
     partial void OnMaLoaiPhongChanged();
     partial void OnTenLoaiChanging(string value);
     partial void OnTenLoaiChanged();
+    partial void OnSoGiuongChanging(System.Nullable<int> value);
+    partial void OnSoGiuongChanged();
+    partial void OnGiaGioChanging(System.Nullable<int> value);
+    partial void OnGiaGioChanged();
+    partial void OnGiaNgayChanging(System.Nullable<int> value);
+    partial void OnGiaNgayChanged();
+    partial void OnGiaThangChanging(System.Nullable<int> value);
+    partial void OnGiaThangChanged();
     #endregion
 		
 		public tbl_LoaiPhong()
@@ -935,6 +951,86 @@ namespace DAO_BLL
 					this._TenLoai = value;
 					this.SendPropertyChanged("TenLoai");
 					this.OnTenLoaiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SoGiuong", DbType="Int")]
+		public System.Nullable<int> SoGiuong
+		{
+			get
+			{
+				return this._SoGiuong;
+			}
+			set
+			{
+				if ((this._SoGiuong != value))
+				{
+					this.OnSoGiuongChanging(value);
+					this.SendPropertyChanging();
+					this._SoGiuong = value;
+					this.SendPropertyChanged("SoGiuong");
+					this.OnSoGiuongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GiaGio", DbType="Int")]
+		public System.Nullable<int> GiaGio
+		{
+			get
+			{
+				return this._GiaGio;
+			}
+			set
+			{
+				if ((this._GiaGio != value))
+				{
+					this.OnGiaGioChanging(value);
+					this.SendPropertyChanging();
+					this._GiaGio = value;
+					this.SendPropertyChanged("GiaGio");
+					this.OnGiaGioChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GiaNgay", DbType="Int")]
+		public System.Nullable<int> GiaNgay
+		{
+			get
+			{
+				return this._GiaNgay;
+			}
+			set
+			{
+				if ((this._GiaNgay != value))
+				{
+					this.OnGiaNgayChanging(value);
+					this.SendPropertyChanging();
+					this._GiaNgay = value;
+					this.SendPropertyChanged("GiaNgay");
+					this.OnGiaNgayChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GiaThang", DbType="Int")]
+		public System.Nullable<int> GiaThang
+		{
+			get
+			{
+				return this._GiaThang;
+			}
+			set
+			{
+				if ((this._GiaThang != value))
+				{
+					this.OnGiaThangChanging(value);
+					this.SendPropertyChanging();
+					this._GiaThang = value;
+					this.SendPropertyChanged("GiaThang");
+					this.OnGiaThangChanged();
 				}
 			}
 		}

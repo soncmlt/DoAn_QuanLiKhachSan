@@ -44,6 +44,10 @@
     <Type Name="tbl_LoaiPhong">
       <Column Name="MaLoaiPhong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoGiuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaGio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaNgay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="tbl_LoaiPhong_tbl_Phong" Member="tbl_Phongs" ThisKey="MaLoaiPhong" OtherKey="MaLoaiPhong" Type="tbl_Phong" />
     </Type>
   </Table>
