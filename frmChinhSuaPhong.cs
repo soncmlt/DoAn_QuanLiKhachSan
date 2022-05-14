@@ -146,6 +146,7 @@ namespace DoAn_QuanLiKhachSan
                     {
                         MessageBox.Show("Thêm loại phòng thành công!");
                         LoadTypeRoom();
+                        CheckDataTypeRooome();
                     }
                     else
                     {
@@ -166,7 +167,7 @@ namespace DoAn_QuanLiKhachSan
             lstStatus.Add("Chưa thuê");
             lstStatus.Add("Đã thuê");
             cbo_TrangThai.Properties.DataSource = lstStatus;
-            cbo_TrangThai.Text = "Chưa thuê";
+            cbo_TrangThai.EditValue = "Chưa thuê";
         }
 
         public void CheckDataTypeRooome()
@@ -183,6 +184,12 @@ namespace DoAn_QuanLiKhachSan
             {
                 btn_SuaPhong.Enabled = false;
                 btn_XoaPhong.Enabled = false;
+            }
+            if (dgv_DSPhong.DataSource != null || dgv_DSPhong.Rows.Count > 0)
+            {
+                btn_ThemPhong.Enabled = true;
+                btn_SuaPhong.Enabled = true;
+                btn_XoaPhong.Enabled = true;
             }
         }
         #endregion

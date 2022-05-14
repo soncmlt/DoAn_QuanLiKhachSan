@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -69,6 +70,22 @@ namespace DAO_BLL
             {
                 return false;
             }
+        }
+
+        public List<PhongBO> LoadMenuRoom()
+        {
+            var lstResult = from objPhong in dataContext.tbl_Phongs
+                            join objLoaiPhong in dataContext.tbl_LoaiPhongs
+                            on objPhong.MaLoaiPhong equals objLoaiPhong.MaLoaiPhong
+                            select new PhongBO()
+                            {
+                                MaPhong = objPhong.MaPhong,
+                                TenLoai = objLoaiPhong.TenLoai,
+                                MaLoaiPhong = objPhong.MaLoaiPhong,
+                                TenPhong = objPhong.TenPhong,
+                                TinhTrang = objPhong.TinhTrang
+                            };
+            return lstResult.OrderByDescending(x => x.MaPhong).ToList();
         }
         #endregion
     }

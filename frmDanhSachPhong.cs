@@ -1,4 +1,6 @@
-﻿using DevExpress.XtraEditors;
+﻿using BO;
+using DAO_BLL;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +15,8 @@ namespace DoAn_QuanLiKhachSan
 {
     public partial class frmDanhSachPhong : DevExpress.XtraEditors.XtraForm
     {
+        PhongDAO objPhongDAO = new PhongDAO();
+
         public frmDanhSachPhong()
         {
             InitializeComponent();
@@ -25,45 +29,64 @@ namespace DoAn_QuanLiKhachSan
 
         private void btn_capNhat_Click(object sender, EventArgs e)
         {
-            //DynamicUserControls();
-            //for (int i = 0; i < xl.CountPhong(); i++)
-            //{
-            //    TreeNode node = new TreeNode(xl.LoadMenuPT()[i].TENPHONG);
-            //    trv_DSTenPhong.Nodes.Add(node);
+            DynamicUserControls();
+            List<PhongBO> lstPhong = new List<PhongBO>();
+            lstPhong = objPhongDAO.LoadMenuRoom();
+            int soluong = lstPhong.Count();
+            trv_DSTenPhong.Nodes.Clear();
+            for (int i = 0; i < lstPhong.Count(); i++)
+            {
+                TreeNode node = new TreeNode(lstPhong[i].TenPhong);
+                trv_DSTenPhong.Nodes.Add(node);
 
-            //}
+            }
 
-        }
-        private void DynamicUserControls()
-        {
-            //flowLayoutPanel1.Controls.Clear();
-
-            //int soluong = xl.CountPhong();
-            //Phong[] phongs = new Phong[soluong];
-            //for (int i = 0; i < phongs.Length; i++)
-            //{
-            //    phongs[i] = new Phong();
-            //    phongs[i].MaPhong = xl.LoadMenuPT()[i].MAPT.ToString();
-            //    phongs[i].MaLP = xl.LoadMenuPT()[i].MALP.ToString();
-            //    phongs[i].TenPhong = xl.LoadMenuPT()[i].TENPHONG;
-            //    phongs[i].SLHT = xl.LoadMenuPT()[i].SONGUOIHIENTAI.ToString();
-            //    phongs[i].SLTD = xl.LoadMenuPT()[i].SLTOIDA.ToString();
-            //    phongs[i].TrangThai = xl.LoadMenuPT()[i].TRANGTHAI;
-            //    phongs[i].DienTich = xl.GetDientich(int.Parse(xl.LoadMenuPT()[i].MALP.ToString())).ToString();
-            //    flowLayoutPanel1.Controls.Add(phongs[i]);
-            //    phongs[i].Click += new System.EventHandler(this.Phong_Click);
-            //}
         }
         private void Phong_Click(object sender, EventArgs e)
         {
-            //Phong obj = (Phong)sender;
-            //textEdit1.Text = obj.TenPhong;
-            //textEdit2.Text = xl.TenLoai(int.Parse(obj.MaLP));
-            //textEdit3.Text = obj.SLTD;
-            //textEdit4.Text = obj.SLHT;
-            //textEdit5.Text = obj.DienTich;
-            //textEdit6.Text = obj.TrangThai;
+            Phong obj = (Phong)sender;
+            txt_maPhong.Text = obj.MaPhong;
+            txt_tenPhong.Text = obj.TenPhong;
+            txt_trangThai.Text = obj.TrangThai;
+            txt_loaiPhong.Text = obj.TenLoaiPhong;
+        }
 
+        private void frmDanhSachPhong_Load(object sender, EventArgs e)
+        {
+            txt_maPhong.ReadOnly = true;
+            txt_tenPhong.ReadOnly = true;
+            txt_trangThai.ReadOnly = true;
+            txt_loaiPhong.ReadOnly = true;
+            DynamicUserControls();
+            List<PhongBO> lstPhong = new List<PhongBO>();
+            lstPhong = objPhongDAO.LoadMenuRoom();
+            int soluong = lstPhong.Count();
+            for (int i = 0; i < lstPhong.Count(); i++)
+            {
+                TreeNode node = new TreeNode(lstPhong[i].TenPhong);
+                trv_DSTenPhong.Nodes.Add(node);
+
+            }
+        }
+
+        private void DynamicUserControls()
+        {
+            flowLayoutPanel1.Controls.Clear();
+            List<PhongBO> lstPhong = new List<PhongBO>();
+            lstPhong = objPhongDAO.LoadMenuRoom();
+            int soluong = lstPhong.Count();
+            Phong[] phongs = new Phong[soluong];
+            for (int i = 0; i < phongs.Length; i++)
+            {
+                phongs[i] = new Phong();
+                phongs[i].MaPhong = lstPhong[i].MaPhong.ToString();
+                phongs[i].MaLP = lstPhong[i].MaLoaiPhong.ToString();
+                phongs[i].TenPhong = lstPhong[i].TenPhong;
+                phongs[i].TrangThai = lstPhong[i].TinhTrang;
+                phongs[i].TenLoaiPhong = lstPhong[i].TenLoai;
+                flowLayoutPanel1.Controls.Add(phongs[i]);
+                phongs[i].Click += new System.EventHandler(this.Phong_Click);
+            }
         }
     }
 }
