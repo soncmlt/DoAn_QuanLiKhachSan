@@ -237,6 +237,7 @@ namespace DoAn_QuanLiKhachSan
             this.Controls.Add(this.groupControl1);
             this.Name = "frmDanhSachPhong";
             this.Text = "DANH SÁCH PHÒNG";
+            this.Load += new System.EventHandler(this.frmDanhSachPhong_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

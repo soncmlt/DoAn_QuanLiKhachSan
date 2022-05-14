@@ -10,8 +10,9 @@
   <Table Name="dbo.tbl_Phong" Member="tbl_Phongs">
     <Type Name="tbl_Phong">
       <Column Name="MaPhong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="TenPhong" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Column Name="MaLoaiPhong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="TinhTrang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="TinhTrang" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
       <Association Name="tbl_Phong_tbl_PhieuThue" Member="tbl_PhieuThues" ThisKey="MaPhong" OtherKey="MaPhong" Type="tbl_PhieuThue" />
       <Association Name="tbl_LoaiPhong_tbl_Phong" Member="tbl_LoaiPhong" ThisKey="MaLoaiPhong" OtherKey="MaLoaiPhong" Type="tbl_LoaiPhong" IsForeignKey="true" />
     </Type>
@@ -44,6 +45,10 @@
     <Type Name="tbl_LoaiPhong">
       <Column Name="MaLoaiPhong" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="TenLoai" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SoGiuong" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaGio" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaNgay" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="GiaThang" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="tbl_LoaiPhong_tbl_Phong" Member="tbl_Phongs" ThisKey="MaLoaiPhong" OtherKey="MaLoaiPhong" Type="tbl_Phong" />
     </Type>
   </Table>
