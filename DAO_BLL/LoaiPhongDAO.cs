@@ -9,7 +9,7 @@ namespace DAO_BLL
     public class LoaiPhongDAO
     {
         DataQLKhachSanDataContext dataContext = new DataQLKhachSanDataContext();
-        #region
+        #region Methods
         /* Createby: 162860 - Vo Hoang Bao Son
            CreatedDate: 13/05/2022
         */
@@ -24,7 +24,9 @@ namespace DAO_BLL
         {
             try
             {
+                var lstPhong = dataContext.tbl_Phongs.Where(t => t.MaLoaiPhong == intTypeRoomId);
                 var loaiphong = dataContext.tbl_LoaiPhongs.Where(t => t.MaLoaiPhong == intTypeRoomId);
+                dataContext.tbl_Phongs.DeleteAllOnSubmit(lstPhong);
                 dataContext.tbl_LoaiPhongs.DeleteAllOnSubmit(loaiphong);
                 dataContext.SubmitChanges();
                 return true;

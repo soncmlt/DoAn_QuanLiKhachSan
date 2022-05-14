@@ -273,9 +273,11 @@ namespace DAO_BLL
 		
 		private int _MaPhong;
 		
+		private string _TenPhong;
+		
 		private int _MaLoaiPhong;
 		
-		private System.Nullable<bool> _TinhTrang;
+		private string _TinhTrang;
 		
 		private EntitySet<tbl_PhieuThue> _tbl_PhieuThues;
 		
@@ -287,9 +289,11 @@ namespace DAO_BLL
     partial void OnCreated();
     partial void OnMaPhongChanging(int value);
     partial void OnMaPhongChanged();
+    partial void OnTenPhongChanging(string value);
+    partial void OnTenPhongChanged();
     partial void OnMaLoaiPhongChanging(int value);
     partial void OnMaLoaiPhongChanged();
-    partial void OnTinhTrangChanging(System.Nullable<bool> value);
+    partial void OnTinhTrangChanging(string value);
     partial void OnTinhTrangChanged();
     #endregion
 		
@@ -320,6 +324,26 @@ namespace DAO_BLL
 			}
 		}
 		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenPhong", DbType="NVarChar(20)")]
+		public string TenPhong
+		{
+			get
+			{
+				return this._TenPhong;
+			}
+			set
+			{
+				if ((this._TenPhong != value))
+				{
+					this.OnTenPhongChanging(value);
+					this.SendPropertyChanging();
+					this._TenPhong = value;
+					this.SendPropertyChanged("TenPhong");
+					this.OnTenPhongChanged();
+				}
+			}
+		}
+		
 		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLoaiPhong", DbType="Int NOT NULL")]
 		public int MaLoaiPhong
 		{
@@ -344,8 +368,8 @@ namespace DAO_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="Bit")]
-		public System.Nullable<bool> TinhTrang
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TinhTrang", DbType="NVarChar(20)")]
+		public string TinhTrang
 		{
 			get
 			{
