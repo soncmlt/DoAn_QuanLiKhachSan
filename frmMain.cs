@@ -57,5 +57,26 @@ namespace DoAn_QuanLiKhachSan
             frm.Name = "Chỉnh sửa thông tin phòng";
             ViewChildForm(frm);
         }
+
+        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmThongTinNhanVien frm = new frmThongTinNhanVien();
+            frm.Name = "Thông tin nhân viên";
+            ViewChildForm(frm);
+        }
+
+        private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmQuanLiThongTinNhanVien frm = new frmQuanLiThongTinNhanVien();
+            frm.Name = "Quản lí thông tin nhân viên";
+            ViewChildForm(frm);
+        }
+
+        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmThayDoiMatKhau frm = new frmThayDoiMatKhau();
+            frm.Name = "Thay đổi mật khẩu";
+            ViewChildForm(frm);
+        }
     }
 }
