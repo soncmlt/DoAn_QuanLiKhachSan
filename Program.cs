@@ -11,11 +11,6 @@ namespace DoAn_QuanLiKhachSan
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
-        public static ThanhToanForm thanhToanForm = null;
-        public static QuanLiNhanVienForm quanLiNhanVienForm = null;
-        public static QuanLiPhongForm quanLiPhongForm = null;
-        public static ThongTinKhachHangForm thongTinKhachHangForm = null;
-        public static DatPhongForm datPhongForm = null;
         public static FrmDangNhap frmDangNhap = null;
         [STAThread]
         static void Main()
