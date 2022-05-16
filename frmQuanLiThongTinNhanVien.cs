@@ -17,5 +17,15 @@ namespace DoAn_QuanLiKhachSan
         {
             InitializeComponent();
         }
+
+        private void labelControl1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void labelControl5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
