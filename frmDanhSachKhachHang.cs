@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.XtraEditors;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,9 @@ using System.Windows.Forms;
 
 namespace DoAn_QuanLiKhachSan
 {
-    public partial class ThanhToanForm : Form
+    public partial class frmDanhSachKhachHang : DevExpress.XtraEditors.XtraForm
     {
-        public ThanhToanForm()
+        public frmDanhSachKhachHang()
         {
             InitializeComponent();
         }

@@ -23,7 +23,7 @@ namespace DoAn_QuanLiKhachSan
             if (panel1.Width >= panel2.Width)
             {
                 timer1.Stop();
-                FormMain frm = new FormMain();
+                frmMain frm = new frmMain();
                 frm.Show();
                 this.Hide();
             }

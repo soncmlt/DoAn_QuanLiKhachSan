@@ -76,6 +76,13 @@ namespace DoAn_QuanLiKhachSan
         {
             frmThayDoiMatKhau frm = new frmThayDoiMatKhau();
             frm.Name = "Thay đổi mật khẩu";
+            frm.ShowDialog();
+        }
+
+        private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmDanhSachKhachHang frm = new frmDanhSachKhachHang();
+            frm.Name = "Thông tin khách hàng";
             ViewChildForm(frm);
         }
     }
