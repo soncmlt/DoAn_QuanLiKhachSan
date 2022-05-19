@@ -26,15 +26,20 @@ Create Table tbl_NhanVien
 Create Table tbl_LoaiPhong
 (
 	MaLoaiPhong int identity (1,1) primary key not null,
-	TenLoai nvarchar (50)
+	TenLoai nvarchar (50),
+	SoGiuong int,
+	GiaGio int,
+	GiaNgay int,
+	GiaThang int
 );
 
 Create Table tbl_Phong
 (
 	MaPhong int identity (1,1) primary key not null,
+	TenPhong nvarchar(20),
 	MaLoaiPhong int not null,
-	TinhTrang bit /*True(phòng trống) -- False (đang thuê)*/
-	/*Có thể xem thêm thông tin chi tiết của phòng như số giường, hình ảnh phòng,.....*/
+	TinhTrang nvarchar(20) /*True(phòng trống) -- False (đang thuê)*/
+	/*Có thể xem thêm thông tin chi tiết của phòng như hình ảnh phòng,.....*/
 	Constraint "FK_LoaiPhong_Phong" foreign key (MaLoaiPhong) references  tbl_LoaiPhong(MaLoaiPhong)
 );
 
@@ -80,4 +85,8 @@ Insert into tbl_NhanVien Values ('0703051386',N'Võ Hoàng Bảo Sơn', '1', 1, 
 alter table tbl_NhanVien
 alter column GioiTinh nvarchar(10)
 
-select * from tbl_NhanVien
+select * from tbl_LoaiPhong
+select * from tbl_Phong
+Insert into tbl_LoaiPhong Values (N'Phòng Đơn', 1, 30000, 300000, 1500000);
+Insert into tbl_Phong Values (N'Phòng Sơn Tạo', 1, N'Chưa thuê');
+delete tbl_LoaiPhong
