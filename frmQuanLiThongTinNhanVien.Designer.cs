@@ -34,52 +34,53 @@ namespace DoAn_QuanLiKhachSan
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmQuanLiThongTinNhanVien));
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
+            this.txt_ChuVu = new DevExpress.XtraEditors.TextEdit();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.cbo_TrangThai = new DevExpress.XtraEditors.LookUpEdit();
-            this.txt_tenPhong = new DevExpress.XtraEditors.TextEdit();
-            this.txt_maNhanVien = new DevExpress.XtraEditors.TextEdit();
+            this.txt_TenNV = new DevExpress.XtraEditors.TextEdit();
+            this.txt_SDT = new DevExpress.XtraEditors.TextEdit();
             this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
             this.dtp_ngaySinh = new DevExpress.XtraEditors.DateEdit();
             this.cbo_gioiTinh = new DevExpress.XtraEditors.LookUpEdit();
             this.txt_diaChi = new DevExpress.XtraEditors.TextEdit();
             this.txt_matKhau = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel6 = new System.Windows.Forms.TableLayoutPanel();
-            this.btn_SuaPhong = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_XoaPhong = new DevExpress.XtraEditors.SimpleButton();
-            this.btn_ThemPhong = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_SuaNV = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_XoaNV = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_ThemNV = new DevExpress.XtraEditors.SimpleButton();
             this.groupControl4 = new DevExpress.XtraEditors.GroupControl();
-            this.dgv_DSPhong = new System.Windows.Forms.DataGridView();
-            this.col_MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_DSNhanVien = new System.Windows.Forms.DataGridView();
             this.btn_ThemLoai = new DevExpress.XtraEditors.SimpleButton();
             this.btn_SuaLoai = new DevExpress.XtraEditors.SimpleButton();
             this.btn_XoaLoai = new DevExpress.XtraEditors.SimpleButton();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
+            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
+            this.dgv_ChucVu = new System.Windows.Forms.DataGridView();
+            this.col_MaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.txt_tenChucVu = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.dgv_DSLoaiPhong = new System.Windows.Forms.DataGridView();
-            this.col_MaChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_TenChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MaNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_TenNhanVien = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_ChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_NgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_GioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.col_MatKhau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel4.SuspendLayout();
             this.tableLayoutPanel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_TrangThai.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_tenPhong.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_maNhanVien.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ChuVu.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenNV.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_ngaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_ngaySinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_gioiTinh.Properties)).BeginInit();
@@ -88,19 +89,19 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSNhanVien)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.tableLayoutPanel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
+            this.groupControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChucVu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_tenChucVu.Properties)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
-            this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSLoaiPhong)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel4
@@ -126,15 +127,15 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel4.SetColumnSpan(this.tableLayoutPanel5, 2);
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel5.Controls.Add(this.txt_ChuVu, 1, 2);
             this.tableLayoutPanel5.Controls.Add(this.labelControl7, 0, 6);
             this.tableLayoutPanel5.Controls.Add(this.labelControl4, 0, 5);
             this.tableLayoutPanel5.Controls.Add(this.labelControl2, 0, 4);
             this.tableLayoutPanel5.Controls.Add(this.labelControl1, 0, 3);
             this.tableLayoutPanel5.Controls.Add(this.labelControl6, 0, 2);
             this.tableLayoutPanel5.Controls.Add(this.labelControl5, 0, 1);
-            this.tableLayoutPanel5.Controls.Add(this.cbo_TrangThai, 1, 2);
-            this.tableLayoutPanel5.Controls.Add(this.txt_tenPhong, 1, 1);
-            this.tableLayoutPanel5.Controls.Add(this.txt_maNhanVien, 1, 0);
+            this.tableLayoutPanel5.Controls.Add(this.txt_TenNV, 1, 1);
+            this.tableLayoutPanel5.Controls.Add(this.txt_SDT, 1, 0);
             this.tableLayoutPanel5.Controls.Add(this.labelControl8, 0, 0);
             this.tableLayoutPanel5.Controls.Add(this.dtp_ngaySinh, 1, 3);
             this.tableLayoutPanel5.Controls.Add(this.cbo_gioiTinh, 1, 4);
@@ -151,8 +152,19 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel5.Size = new System.Drawing.Size(631, 253);
             this.tableLayoutPanel5.TabIndex = 0;
+            // 
+            // txt_ChuVu
+            // 
+            this.txt_ChuVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_ChuVu.Enabled = false;
+            this.txt_ChuVu.Location = new System.Drawing.Point(318, 75);
+            this.txt_ChuVu.Name = "txt_ChuVu";
+            this.txt_ChuVu.Properties.AutoHeight = false;
+            this.txt_ChuVu.Size = new System.Drawing.Size(310, 30);
+            this.txt_ChuVu.TabIndex = 10;
             // 
             // labelControl7
             // 
@@ -214,37 +226,24 @@ namespace DoAn_QuanLiKhachSan
             this.labelControl5.Text = "Tên nhân viên";
             this.labelControl5.Click += new System.EventHandler(this.labelControl5_Click);
             // 
-            // cbo_TrangThai
+            // txt_TenNV
             // 
-            this.cbo_TrangThai.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.cbo_TrangThai.Location = new System.Drawing.Point(318, 75);
-            this.cbo_TrangThai.Name = "cbo_TrangThai";
-            this.cbo_TrangThai.Properties.AutoHeight = false;
-            this.cbo_TrangThai.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.cbo_TrangThai.Size = new System.Drawing.Size(310, 30);
-            this.cbo_TrangThai.TabIndex = 1;
-            this.cbo_TrangThai.EditValueChanged += new System.EventHandler(this.cbo_TrangThai_EditValueChanged);
+            this.txt_TenNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_TenNV.Location = new System.Drawing.Point(318, 39);
+            this.txt_TenNV.Name = "txt_TenNV";
+            this.txt_TenNV.Properties.AutoHeight = false;
+            this.txt_TenNV.Size = new System.Drawing.Size(310, 30);
+            this.txt_TenNV.TabIndex = 6;
+            this.txt_TenNV.EditValueChanged += new System.EventHandler(this.txt_tenPhong_EditValueChanged);
             // 
-            // txt_tenPhong
+            // txt_SDT
             // 
-            this.txt_tenPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_tenPhong.Location = new System.Drawing.Point(318, 39);
-            this.txt_tenPhong.Name = "txt_tenPhong";
-            this.txt_tenPhong.Properties.AutoHeight = false;
-            this.txt_tenPhong.Size = new System.Drawing.Size(310, 30);
-            this.txt_tenPhong.TabIndex = 6;
-            this.txt_tenPhong.EditValueChanged += new System.EventHandler(this.txt_tenPhong_EditValueChanged);
-            // 
-            // txt_maNhanVien
-            // 
-            this.txt_maNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_maNhanVien.Location = new System.Drawing.Point(318, 3);
-            this.txt_maNhanVien.Name = "txt_maNhanVien";
-            this.txt_maNhanVien.Properties.AutoHeight = false;
-            this.txt_maNhanVien.Size = new System.Drawing.Size(310, 30);
-            this.txt_maNhanVien.TabIndex = 6;
-            this.txt_maNhanVien.EditValueChanged += new System.EventHandler(this.txt_maNhanVien_EditValueChanged);
+            this.txt_SDT.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_SDT.Location = new System.Drawing.Point(318, 3);
+            this.txt_SDT.Name = "txt_SDT";
+            this.txt_SDT.Properties.AutoHeight = false;
+            this.txt_SDT.Size = new System.Drawing.Size(310, 30);
+            this.txt_SDT.TabIndex = 6;
             // 
             // labelControl8
             // 
@@ -253,7 +252,7 @@ namespace DoAn_QuanLiKhachSan
             this.labelControl8.Name = "labelControl8";
             this.labelControl8.Size = new System.Drawing.Size(309, 30);
             this.labelControl8.TabIndex = 0;
-            this.labelControl8.Text = "Mã nhân viên";
+            this.labelControl8.Text = "Số điện thoại";
             this.labelControl8.Click += new System.EventHandler(this.labelControl5_Click);
             // 
             // dtp_ngaySinh
@@ -267,6 +266,7 @@ namespace DoAn_QuanLiKhachSan
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtp_ngaySinh.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dtp_ngaySinh.Properties.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.DisableTextEditor;
             this.dtp_ngaySinh.Size = new System.Drawing.Size(310, 30);
             this.dtp_ngaySinh.TabIndex = 9;
             this.dtp_ngaySinh.EditValueChanged += new System.EventHandler(this.dtp_ngaySinh_EditValueChanged);
@@ -310,9 +310,9 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
             this.tableLayoutPanel6.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33334F));
-            this.tableLayoutPanel6.Controls.Add(this.btn_SuaPhong, 1, 0);
-            this.tableLayoutPanel6.Controls.Add(this.btn_XoaPhong, 2, 0);
-            this.tableLayoutPanel6.Controls.Add(this.btn_ThemPhong, 0, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btn_SuaNV, 1, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btn_XoaNV, 2, 0);
+            this.tableLayoutPanel6.Controls.Add(this.btn_ThemNV, 0, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel6.Location = new System.Drawing.Point(3, 262);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
@@ -322,46 +322,46 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel6.Size = new System.Drawing.Size(631, 69);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
-            // btn_SuaPhong
+            // btn_SuaNV
             // 
-            this.btn_SuaPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_SuaPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SuaPhong.ImageOptions.Image")));
-            this.btn_SuaPhong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btn_SuaPhong.Location = new System.Drawing.Point(213, 3);
-            this.btn_SuaPhong.Name = "btn_SuaPhong";
-            this.btn_SuaPhong.Size = new System.Drawing.Size(204, 63);
-            this.btn_SuaPhong.TabIndex = 0;
-            this.btn_SuaPhong.Text = "Sửa";
-            this.btn_SuaPhong.Click += new System.EventHandler(this.btn_SuaPhong_Click);
+            this.btn_SuaNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_SuaNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_SuaPhong.ImageOptions.Image")));
+            this.btn_SuaNV.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btn_SuaNV.Location = new System.Drawing.Point(213, 3);
+            this.btn_SuaNV.Name = "btn_SuaNV";
+            this.btn_SuaNV.Size = new System.Drawing.Size(204, 63);
+            this.btn_SuaNV.TabIndex = 0;
+            this.btn_SuaNV.Text = "Sửa";
+            this.btn_SuaNV.Click += new System.EventHandler(this.btn_SuaPhong_Click);
             // 
-            // btn_XoaPhong
+            // btn_XoaNV
             // 
-            this.btn_XoaPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_XoaPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaPhong.ImageOptions.Image")));
-            this.btn_XoaPhong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btn_XoaPhong.Location = new System.Drawing.Point(423, 3);
-            this.btn_XoaPhong.Name = "btn_XoaPhong";
-            this.btn_XoaPhong.Size = new System.Drawing.Size(205, 63);
-            this.btn_XoaPhong.TabIndex = 0;
-            this.btn_XoaPhong.Text = "Xoá";
-            this.btn_XoaPhong.Click += new System.EventHandler(this.btn_XoaPhong_Click);
+            this.btn_XoaNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_XoaNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_XoaPhong.ImageOptions.Image")));
+            this.btn_XoaNV.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btn_XoaNV.Location = new System.Drawing.Point(423, 3);
+            this.btn_XoaNV.Name = "btn_XoaNV";
+            this.btn_XoaNV.Size = new System.Drawing.Size(205, 63);
+            this.btn_XoaNV.TabIndex = 0;
+            this.btn_XoaNV.Text = "Xoá";
+            this.btn_XoaNV.Click += new System.EventHandler(this.btn_XoaPhong_Click);
             // 
-            // btn_ThemPhong
+            // btn_ThemNV
             // 
-            this.btn_ThemPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_ThemPhong.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemPhong.ImageOptions.Image")));
-            this.btn_ThemPhong.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.btn_ThemPhong.Location = new System.Drawing.Point(3, 3);
-            this.btn_ThemPhong.Name = "btn_ThemPhong";
-            this.btn_ThemPhong.Size = new System.Drawing.Size(204, 63);
-            this.btn_ThemPhong.TabIndex = 0;
-            this.btn_ThemPhong.Text = "Thêm";
-            this.btn_ThemPhong.Click += new System.EventHandler(this.btn_ThemPhong_Click);
+            this.btn_ThemNV.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_ThemNV.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThemPhong.ImageOptions.Image")));
+            this.btn_ThemNV.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btn_ThemNV.Location = new System.Drawing.Point(3, 3);
+            this.btn_ThemNV.Name = "btn_ThemNV";
+            this.btn_ThemNV.Size = new System.Drawing.Size(204, 63);
+            this.btn_ThemNV.TabIndex = 0;
+            this.btn_ThemNV.Text = "Thêm";
+            this.btn_ThemNV.Click += new System.EventHandler(this.btn_ThemPhong_Click);
             // 
             // groupControl4
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.groupControl4, 2);
-            this.groupControl4.Controls.Add(this.dgv_DSPhong);
+            this.groupControl4.Controls.Add(this.dgv_DSNhanVien);
             this.groupControl4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl4.Location = new System.Drawing.Point(3, 532);
             this.groupControl4.Name = "groupControl4";
@@ -369,55 +369,27 @@ namespace DoAn_QuanLiKhachSan
             this.groupControl4.TabIndex = 1;
             this.groupControl4.Text = "Danh sách nhân viên";
             // 
-            // dgv_DSPhong
+            // dgv_DSNhanVien
             // 
-            this.dgv_DSPhong.AllowUserToAddRows = false;
-            this.dgv_DSPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_DSPhong.ColumnHeadersHeight = 36;
-            this.dgv_DSPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_DSPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_DSNhanVien.AllowUserToAddRows = false;
+            this.dgv_DSNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DSNhanVien.ColumnHeadersHeight = 36;
+            this.dgv_DSNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_DSNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_MaNhanVien,
             this.col_TenNhanVien,
             this.col_ChucVu,
             this.col_NgaySinh,
             this.col_GioiTinh,
-            this.col_DiaChi});
-            this.dgv_DSPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DSPhong.Location = new System.Drawing.Point(2, 23);
-            this.dgv_DSPhong.Name = "dgv_DSPhong";
-            this.dgv_DSPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DSPhong.Size = new System.Drawing.Size(1315, 378);
-            this.dgv_DSPhong.TabIndex = 0;
-            // 
-            // col_MaNhanVien
-            // 
-            this.col_MaNhanVien.HeaderText = "Mã nhân viên";
-            this.col_MaNhanVien.Name = "col_MaNhanVien";
-            // 
-            // col_TenNhanVien
-            // 
-            this.col_TenNhanVien.HeaderText = "Tên nhân viên";
-            this.col_TenNhanVien.Name = "col_TenNhanVien";
-            // 
-            // col_ChucVu
-            // 
-            this.col_ChucVu.HeaderText = "Chức vụ";
-            this.col_ChucVu.Name = "col_ChucVu";
-            // 
-            // col_NgaySinh
-            // 
-            this.col_NgaySinh.HeaderText = "Ngày sinh";
-            this.col_NgaySinh.Name = "col_NgaySinh";
-            // 
-            // col_GioiTinh
-            // 
-            this.col_GioiTinh.HeaderText = "Giới tính";
-            this.col_GioiTinh.Name = "col_GioiTinh";
-            // 
-            // col_DiaChi
-            // 
-            this.col_DiaChi.HeaderText = "Địa chỉ";
-            this.col_DiaChi.Name = "col_DiaChi";
+            this.col_DiaChi,
+            this.col_MatKhau});
+            this.dgv_DSNhanVien.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DSNhanVien.Location = new System.Drawing.Point(2, 23);
+            this.dgv_DSNhanVien.Name = "dgv_DSNhanVien";
+            this.dgv_DSNhanVien.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_DSNhanVien.Size = new System.Drawing.Size(1315, 378);
+            this.dgv_DSNhanVien.TabIndex = 0;
+            this.dgv_DSNhanVien.SelectionChanged += new System.EventHandler(this.dgv_DSNhanVien_SelectionChanged);
             // 
             // btn_ThemLoai
             // 
@@ -429,6 +401,7 @@ namespace DoAn_QuanLiKhachSan
             this.btn_ThemLoai.Size = new System.Drawing.Size(201, 75);
             this.btn_ThemLoai.TabIndex = 0;
             this.btn_ThemLoai.Text = "Thêm";
+            this.btn_ThemLoai.Click += new System.EventHandler(this.btn_ThemLoai_Click);
             // 
             // btn_SuaLoai
             // 
@@ -440,6 +413,7 @@ namespace DoAn_QuanLiKhachSan
             this.btn_SuaLoai.Size = new System.Drawing.Size(202, 75);
             this.btn_SuaLoai.TabIndex = 0;
             this.btn_SuaLoai.Text = "Sửa";
+            this.btn_SuaLoai.Click += new System.EventHandler(this.btn_SuaLoai_Click);
             // 
             // btn_XoaLoai
             // 
@@ -451,6 +425,7 @@ namespace DoAn_QuanLiKhachSan
             this.btn_XoaLoai.Size = new System.Drawing.Size(203, 75);
             this.btn_XoaLoai.TabIndex = 0;
             this.btn_XoaLoai.Text = "Xoá";
+            this.btn_XoaLoai.Click += new System.EventHandler(this.btn_XoaLoai_Click);
             // 
             // tableLayoutPanel1
             // 
@@ -495,6 +470,48 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel7.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel7.Size = new System.Drawing.Size(656, 523);
             this.tableLayoutPanel7.TabIndex = 2;
+            // 
+            // groupControl3
+            // 
+            this.tableLayoutPanel7.SetColumnSpan(this.groupControl3, 2);
+            this.groupControl3.Controls.Add(this.dgv_ChucVu);
+            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupControl3.Location = new System.Drawing.Point(3, 173);
+            this.groupControl3.Name = "groupControl3";
+            this.groupControl3.Size = new System.Drawing.Size(650, 347);
+            this.groupControl3.TabIndex = 1;
+            this.groupControl3.Text = "Danh sách các chức vụ";
+            // 
+            // dgv_ChucVu
+            // 
+            this.dgv_ChucVu.AllowUserToAddRows = false;
+            this.dgv_ChucVu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_ChucVu.ColumnHeadersHeight = 36;
+            this.dgv_ChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_ChucVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_MaChucVu,
+            this.col_TenChucVu});
+            this.dgv_ChucVu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_ChucVu.Location = new System.Drawing.Point(2, 23);
+            this.dgv_ChucVu.Name = "dgv_ChucVu";
+            this.dgv_ChucVu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgv_ChucVu.Size = new System.Drawing.Size(646, 322);
+            this.dgv_ChucVu.TabIndex = 0;
+            this.dgv_ChucVu.SelectionChanged += new System.EventHandler(this.dgv_DSLoaiPhong_SelectionChanged);
+            // 
+            // col_MaChucVu
+            // 
+            this.col_MaChucVu.DataPropertyName = "MaLoaiNV";
+            this.col_MaChucVu.HeaderText = "Mã chức vụ";
+            this.col_MaChucVu.Name = "col_MaChucVu";
+            this.col_MaChucVu.ReadOnly = true;
+            // 
+            // col_TenChucVu
+            // 
+            this.col_TenChucVu.DataPropertyName = "TenLoaiNV";
+            this.col_TenChucVu.HeaderText = "Tên chức vụ";
+            this.col_TenChucVu.Name = "col_TenChucVu";
+            this.col_TenChucVu.ReadOnly = true;
             // 
             // groupControl1
             // 
@@ -564,44 +581,55 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel3.Size = new System.Drawing.Size(624, 81);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
-            // groupControl3
+            // col_MaNhanVien
             // 
-            this.tableLayoutPanel7.SetColumnSpan(this.groupControl3, 2);
-            this.groupControl3.Controls.Add(this.dgv_DSLoaiPhong);
-            this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(3, 173);
-            this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(650, 347);
-            this.groupControl3.TabIndex = 1;
-            this.groupControl3.Text = "Danh sách các chức vụ";
+            this.col_MaNhanVien.DataPropertyName = "MaNV";
+            this.col_MaNhanVien.HeaderText = "Mã nhân viên";
+            this.col_MaNhanVien.Name = "col_MaNhanVien";
+            this.col_MaNhanVien.ReadOnly = true;
             // 
-            // dgv_DSLoaiPhong
+            // col_TenNhanVien
             // 
-            this.dgv_DSLoaiPhong.AllowUserToAddRows = false;
-            this.dgv_DSLoaiPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_DSLoaiPhong.ColumnHeadersHeight = 36;
-            this.dgv_DSLoaiPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_DSLoaiPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_MaChucVu,
-            this.col_TenChucVu});
-            this.dgv_DSLoaiPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DSLoaiPhong.Location = new System.Drawing.Point(2, 23);
-            this.dgv_DSLoaiPhong.Name = "dgv_DSLoaiPhong";
-            this.dgv_DSLoaiPhong.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_DSLoaiPhong.Size = new System.Drawing.Size(646, 322);
-            this.dgv_DSLoaiPhong.TabIndex = 0;
+            this.col_TenNhanVien.DataPropertyName = "TenNV";
+            this.col_TenNhanVien.HeaderText = "Tên nhân viên";
+            this.col_TenNhanVien.Name = "col_TenNhanVien";
+            this.col_TenNhanVien.ReadOnly = true;
             // 
-            // col_MaChucVu
+            // col_ChucVu
             // 
-            this.col_MaChucVu.HeaderText = "Mã chức vụ";
-            this.col_MaChucVu.Name = "col_MaChucVu";
-            this.col_MaChucVu.ReadOnly = true;
+            this.col_ChucVu.DataPropertyName = "ChucVu";
+            this.col_ChucVu.HeaderText = "Chức vụ";
+            this.col_ChucVu.Name = "col_ChucVu";
+            this.col_ChucVu.ReadOnly = true;
             // 
-            // col_TenChucVu
+            // col_NgaySinh
             // 
-            this.col_TenChucVu.HeaderText = "Tên chức vụ";
-            this.col_TenChucVu.Name = "col_TenChucVu";
-            this.col_TenChucVu.ReadOnly = true;
+            this.col_NgaySinh.DataPropertyName = "NgaySinh";
+            this.col_NgaySinh.HeaderText = "Ngày sinh";
+            this.col_NgaySinh.Name = "col_NgaySinh";
+            this.col_NgaySinh.ReadOnly = true;
+            // 
+            // col_GioiTinh
+            // 
+            this.col_GioiTinh.DataPropertyName = "GioiTinh";
+            this.col_GioiTinh.HeaderText = "Giới tính";
+            this.col_GioiTinh.Name = "col_GioiTinh";
+            this.col_GioiTinh.ReadOnly = true;
+            // 
+            // col_DiaChi
+            // 
+            this.col_DiaChi.DataPropertyName = "DiaChi";
+            this.col_DiaChi.HeaderText = "Địa chỉ";
+            this.col_DiaChi.Name = "col_DiaChi";
+            this.col_DiaChi.ReadOnly = true;
+            // 
+            // col_MatKhau
+            // 
+            this.col_MatKhau.DataPropertyName = "MatKhau";
+            this.col_MatKhau.HeaderText = "Mật Khẩu";
+            this.col_MatKhau.Name = "col_MatKhau";
+            this.col_MatKhau.ReadOnly = true;
+            this.col_MatKhau.Visible = false;
             // 
             // frmQuanLiThongTinNhanVien
             // 
@@ -614,9 +642,9 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel4.ResumeLayout(false);
             this.tableLayoutPanel5.ResumeLayout(false);
             this.tableLayoutPanel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cbo_TrangThai.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_tenPhong.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_maNhanVien.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_ChuVu.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_TenNV.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_ngaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_ngaySinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_gioiTinh.Properties)).EndInit();
@@ -625,20 +653,20 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSNhanVien)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.tableLayoutPanel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
+            this.groupControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ChucVu)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.tableLayoutPanel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txt_tenChucVu.Properties)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
-            this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSLoaiPhong)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -649,44 +677,45 @@ namespace DoAn_QuanLiKhachSan
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private DevExpress.XtraEditors.LabelControl labelControl5;
         private DevExpress.XtraEditors.LabelControl labelControl6;
-        private DevExpress.XtraEditors.LookUpEdit cbo_TrangThai;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel6;
-        private DevExpress.XtraEditors.SimpleButton btn_ThemPhong;
-        private DevExpress.XtraEditors.SimpleButton btn_SuaPhong;
-        private DevExpress.XtraEditors.SimpleButton btn_XoaPhong;
-        private DevExpress.XtraEditors.TextEdit txt_tenPhong;
+        private DevExpress.XtraEditors.SimpleButton btn_ThemNV;
+        private DevExpress.XtraEditors.SimpleButton btn_SuaNV;
+        private DevExpress.XtraEditors.SimpleButton btn_XoaNV;
+        private DevExpress.XtraEditors.TextEdit txt_TenNV;
         private DevExpress.XtraEditors.GroupControl groupControl4;
-        private System.Windows.Forms.DataGridView dgv_DSPhong;
+        private System.Windows.Forms.DataGridView dgv_DSNhanVien;
         private DevExpress.XtraEditors.SimpleButton btn_ThemLoai;
         private DevExpress.XtraEditors.SimpleButton btn_SuaLoai;
         private DevExpress.XtraEditors.SimpleButton btn_XoaLoai;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private System.Windows.Forms.DataGridView dgv_DSLoaiPhong;
+        private System.Windows.Forms.DataGridView dgv_ChucVu;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.TextEdit txt_tenChucVu;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private DevExpress.XtraEditors.GroupControl groupControl2;
+        private LabelControl labelControl1;
+        private LabelControl labelControl2;
+        private LabelControl labelControl7;
+        private LabelControl labelControl4;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
+        private TextEdit txt_SDT;
+        private LabelControl labelControl8;
+        private DateEdit dtp_ngaySinh;
+        private LookUpEdit cbo_gioiTinh;
+        private TextEdit txt_diaChi;
+        private TextEdit txt_matKhau;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaChucVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenChucVu;
+        private TextEdit txt_ChuVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_MaNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_TenNhanVien;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_ChucVu;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_NgaySinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_GioiTinh;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_DiaChi;
-        private LabelControl labelControl1;
-        private LabelControl labelControl2;
-        private LabelControl labelControl7;
-        private LabelControl labelControl4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel7;
-        private TextEdit txt_maNhanVien;
-        private LabelControl labelControl8;
-        private DateEdit dtp_ngaySinh;
-        private LookUpEdit cbo_gioiTinh;
-        private TextEdit txt_diaChi;
-        private TextEdit txt_matKhau;
+        private System.Windows.Forms.DataGridViewTextBoxColumn col_MatKhau;
     }
 }

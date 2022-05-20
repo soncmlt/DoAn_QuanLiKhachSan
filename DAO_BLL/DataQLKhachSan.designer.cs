@@ -1121,6 +1121,10 @@ namespace DAO_BLL
 		
 		private string _GioiTinh;
 		
+		private string _Diachi;
+		
+		private System.Nullable<System.DateTime> _NgaySinh;
+		
 		private EntityRef<tbl_LoaiNhanVien> _tbl_LoaiNhanVien;
 		
     #region Extensibility Method Definitions
@@ -1137,6 +1141,10 @@ namespace DAO_BLL
     partial void OnMaLoaiNVChanged();
     partial void OnGioiTinhChanging(string value);
     partial void OnGioiTinhChanged();
+    partial void OnDiachiChanging(string value);
+    partial void OnDiachiChanged();
+    partial void OnNgaySinhChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgaySinhChanged();
     #endregion
 		
 		public tbl_NhanVien()
@@ -1245,6 +1253,46 @@ namespace DAO_BLL
 					this._GioiTinh = value;
 					this.SendPropertyChanged("GioiTinh");
 					this.OnGioiTinhChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Diachi", DbType="NVarChar(50)")]
+		public string Diachi
+		{
+			get
+			{
+				return this._Diachi;
+			}
+			set
+			{
+				if ((this._Diachi != value))
+				{
+					this.OnDiachiChanging(value);
+					this.SendPropertyChanging();
+					this._Diachi = value;
+					this.SendPropertyChanged("Diachi");
+					this.OnDiachiChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgaySinh", DbType="Date")]
+		public System.Nullable<System.DateTime> NgaySinh
+		{
+			get
+			{
+				return this._NgaySinh;
+			}
+			set
+			{
+				if ((this._NgaySinh != value))
+				{
+					this.OnNgaySinhChanging(value);
+					this.SendPropertyChanging();
+					this._NgaySinh = value;
+					this.SendPropertyChanged("NgaySinh");
+					this.OnNgaySinhChanged();
 				}
 			}
 		}

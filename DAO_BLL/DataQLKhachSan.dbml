@@ -59,6 +59,8 @@
       <Column Name="MatKhau" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="MaLoaiNV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="tbl_LoaiNhanVien_tbl_NhanVien" Member="tbl_LoaiNhanVien" ThisKey="MaLoaiNV" OtherKey="MaLoaiNV" Type="tbl_LoaiNhanVien" IsForeignKey="true" />
     </Type>
   </Table>

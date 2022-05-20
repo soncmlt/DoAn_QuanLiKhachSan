@@ -19,7 +19,9 @@ Create Table tbl_NhanVien
 	TenNV nvarchar (50),
 	MatKhau char(10),
 	MaLoaiNV int not null,
-	GioiTinh nvarchar(10)
+	GioiTinh nvarchar(10),
+	Diachi nvarchar (50),
+	NgaySinh date
 	Constraint "FK_LoaiNhanVien_NhanVien" foreign key (MaLoaiNV) references  tbl_LoaiNhanVien(MaLoaiNV)
 );
 

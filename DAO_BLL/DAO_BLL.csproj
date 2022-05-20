@@ -47,6 +47,7 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
     </Compile>
+    <Compile Include="LoaiNhanVienDAO.cs" />
     <Compile Include="LoaiPhongDAO.cs" />
     <Compile Include="NhanVienDAO.cs" />
     <Compile Include="PhongDAO.cs" />
