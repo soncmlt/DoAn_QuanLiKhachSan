@@ -30,7 +30,11 @@
   <Table Name="dbo.tbl_KhachHang" Member="tbl_KhachHangs">
     <Type Name="tbl_KhachHang">
       <Column Name="MaKH" Type="System.String" DbType="Char(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="HoTen" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="TenKH" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="SDT" Type="System.String" DbType="Char(10)" CanBeNull="true" />
+      <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="DiaChi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="tbl_KhachHang_tbl_PhieuThue" Member="tbl_PhieuThues" ThisKey="MaKH" OtherKey="MaKH" Type="tbl_PhieuThue" />
     </Type>
   </Table>
@@ -59,6 +63,8 @@
       <Column Name="MatKhau" Type="System.String" DbType="Char(10)" CanBeNull="true" />
       <Column Name="MaLoaiNV" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="GioiTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Diachi" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="NgaySinh" Type="System.DateTime" DbType="Date" CanBeNull="true" />
       <Association Name="tbl_LoaiNhanVien_tbl_NhanVien" Member="tbl_LoaiNhanVien" ThisKey="MaLoaiNV" OtherKey="MaLoaiNV" Type="tbl_LoaiNhanVien" IsForeignKey="true" />
     </Type>
   </Table>

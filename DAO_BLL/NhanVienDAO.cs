@@ -9,27 +9,41 @@ namespace DAO_BLL
 {
     public class NhanVienDAO
     {
-        DataQLKhachSanDataContext dataContext = new DataQLKhachSanDataContext();
-        #region
         /* Createby: 162860 - Vo Hoang Bao Son
            CreatedDate: 01/05/2022
         */
-        public List<NhanVienCustomBOView> GetALLNhanVien()
+        #region Properties
+
+        DataQLKhachSanDataContext dataContext = new DataQLKhachSanDataContext();
+
+        #endregion
+
+        #region Methods
+        
+        public List<NhanVienCustomBOView> GetNhanVienByTypeId(int intTypeId)
         {
             var lstResult = from objNhanVien in dataContext.tbl_NhanViens
+                            join objLoaiNV in dataContext.tbl_LoaiNhanViens
+                            on objNhanVien.MaLoaiNV equals objLoaiNV.MaLoaiNV
+                            where objNhanVien.MaLoaiNV == intTypeId
                             select new NhanVienCustomBOView()
                             {
                                 MaNV = objNhanVien.MaNV,
                                 TenNV = objNhanVien.TenNV,
                                 GioiTinh = objNhanVien.GioiTinh,
+                                ChucVu = objLoaiNV.TenLoai,
+                                DiaChi = objNhanVien.Diachi,
+                                NgaySinh = objNhanVien.NgaySinh,
                                 MatKhau = objNhanVien.MatKhau
                             };
             return lstResult.OrderByDescending(x => x.MaNV).ToList();
         }
 
+
+
         public tbl_NhanVien LoadNhanVien(string strUserName, string strPass)
         {
-            
+
             return dataContext.tbl_NhanViens.Where(x => x.MaNV.Trim() == strUserName && x.MatKhau.Trim() == strPass).FirstOrDefault();
         }
 
@@ -43,9 +57,11 @@ namespace DAO_BLL
                     tbl_NhanVien objNV = new tbl_NhanVien();
                     objNV.MaNV = model.MaNV;
                     objNV.TenNV = model.TenNV;
-                    objNV.MatKhau = model.MatKhau;
+                    objNV.MatKhau = model.MaNV;
                     objNV.MaLoaiNV = model.MaLoaiNV;
                     objNV.GioiTinh = model.GioiTinh;
+                    objNV.Diachi = model.DiaChi;
+                    objNV.NgaySinh = model.NgaySinh;
                     dataContext.tbl_NhanViens.InsertOnSubmit(objNV);
                     dataContext.SubmitChanges();
                 }
@@ -53,9 +69,10 @@ namespace DAO_BLL
                 {
                     objCheckDB.TenNV = model.TenNV;
                     objCheckDB.MatKhau = model.MatKhau;
-                    objCheckDB.MaLoaiNV = model.MaLoaiNV;
                     objCheckDB.GioiTinh = model.GioiTinh;
-                    dataContext.SubmitChanges(); 
+                    objCheckDB.NgaySinh = model.NgaySinh;
+                    objCheckDB.Diachi = model.DiaChi;
+                    dataContext.SubmitChanges();
                 }
                 return true;
             }
@@ -65,6 +82,17 @@ namespace DAO_BLL
             }
         }
 
+        public tbl_NhanVien CheckNhanVienExists(string strPhoneNumber)
+        {
+            try
+            {
+                return dataContext.tbl_NhanViens.Where(x => x.MaNV.Trim() == strPhoneNumber.Trim()).FirstOrDefault();
+            }
+            catch
+            {
+                return null;
+            }
+        }
 
         public bool Delete(string strMaNV)
         {

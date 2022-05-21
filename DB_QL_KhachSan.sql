@@ -19,7 +19,9 @@ Create Table tbl_NhanVien
 	TenNV nvarchar (50),
 	MatKhau char(10),
 	MaLoaiNV int not null,
-	GioiTinh nvarchar(10)
+	GioiTinh nvarchar(10),
+	Diachi nvarchar (50),
+	NgaySinh date
 	Constraint "FK_LoaiNhanVien_NhanVien" foreign key (MaLoaiNV) references  tbl_LoaiNhanVien(MaLoaiNV)
 );
 
@@ -38,7 +40,7 @@ Create Table tbl_Phong
 	MaPhong int identity (1,1) primary key not null,
 	TenPhong nvarchar(20),
 	MaLoaiPhong int not null,
-	TinhTrang nvarchar(20) /*True(phòng trống) -- False (đang thuê)*/
+	TinhTrang nvarchar(20) /*True(phòng trống) -- False (đang thuê)*/ -- 19/05/2022 -- 162860 - VHBSon: Cập nhật thành kiểu text
 	/*Có thể xem thêm thông tin chi tiết của phòng như hình ảnh phòng,.....*/
 	Constraint "FK_LoaiPhong_Phong" foreign key (MaLoaiPhong) references  tbl_LoaiPhong(MaLoaiPhong)
 );
@@ -52,7 +54,11 @@ Create Table tbl_HinhThuc
 Create Table tbl_KhachHang
 (
 	MaKH Char(10) primary key not null,/*Mã khách hàng sẽ là CMND*/
-	HoTen nvarchar (50)
+	TenKH nvarchar (50),
+	SDT char(10),
+	GioiTinh nvarchar(10),
+	NgaySinh date,
+	DiaChi nvarchar (50)
 	/*Các thông tin chi tiết khác về khách hàng sẽ được cập nhật thêm vào table (Nếu phát sinh)*/
 );
 
@@ -81,7 +87,7 @@ Create Table tbl_HoaDon
 
 Insert into tbl_LoaiNhanVien Values ('Admin');
 Insert into tbl_NhanVien Values ('0703051386',N'Võ Hoàng Bảo Sơn', '1', 1, N'Nam');
-
+INsert into tbl_KhachHang values ('261610133', N'Võ Hoàng Bảo Sơn', '0703051386', N'Nam', '2000-06-17', N'Tp.Hồ Chí Minh');
 alter table tbl_NhanVien
 alter column GioiTinh nvarchar(10)
 
@@ -90,3 +96,4 @@ select * from tbl_Phong
 Insert into tbl_LoaiPhong Values (N'Phòng Đơn', 1, 30000, 300000, 1500000);
 Insert into tbl_Phong Values (N'Phòng Sơn Tạo', 1, N'Chưa thuê');
 delete tbl_LoaiPhong
+select * from tbl_KhachHang
