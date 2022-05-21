@@ -31,6 +31,11 @@ namespace DoAn_QuanLiKhachSan
             CheckEnable();
         }
 
+        /*
+         User: 162860 -Võ Hoàng Bảo Sơn
+         Note: Khi không có như cầu sử dụng tất cả các method này xin vui lòng xóa!   
+         */
+        #region Các methods không cần thiết - vui lòng xóa
         private void labelControl1_Click(object sender, EventArgs e)
         {
 
@@ -85,6 +90,8 @@ namespace DoAn_QuanLiKhachSan
         {
 
         }
+        #endregion
+
 
         /* CreatedUser: 162860 - Vo Hoang Bao Son
          * CreatedDate: 20-05-2022
@@ -95,7 +102,7 @@ namespace DoAn_QuanLiKhachSan
         {
             dgv_ChucVu.DataSource = objLoaiNhanVienDAO.GetALLLoaiNhanVien();
         }
-        #endregion
+        
 
         private void dgv_DSLoaiPhong_SelectionChanged(object sender, EventArgs e)
         {
@@ -473,6 +480,6 @@ namespace DoAn_QuanLiKhachSan
             }
         }
 
-        
+        #endregion
     }
 }

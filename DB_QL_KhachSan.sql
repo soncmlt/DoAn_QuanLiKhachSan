@@ -40,7 +40,7 @@ Create Table tbl_Phong
 	MaPhong int identity (1,1) primary key not null,
 	TenPhong nvarchar(20),
 	MaLoaiPhong int not null,
-	TinhTrang nvarchar(20) /*True(phòng trống) -- False (đang thuê)*/
+	TinhTrang nvarchar(20) /*True(phòng trống) -- False (đang thuê)*/ -- 19/05/2022 -- 162860 - VHBSon: Cập nhật thành kiểu text
 	/*Có thể xem thêm thông tin chi tiết của phòng như hình ảnh phòng,.....*/
 	Constraint "FK_LoaiPhong_Phong" foreign key (MaLoaiPhong) references  tbl_LoaiPhong(MaLoaiPhong)
 );
@@ -54,7 +54,11 @@ Create Table tbl_HinhThuc
 Create Table tbl_KhachHang
 (
 	MaKH Char(10) primary key not null,/*Mã khách hàng sẽ là CMND*/
-	HoTen nvarchar (50)
+	TenKH nvarchar (50),
+	SDT char(10),
+	GioiTinh nvarchar(10),
+	NgaySinh date,
+	DiaChi nvarchar (50)
 	/*Các thông tin chi tiết khác về khách hàng sẽ được cập nhật thêm vào table (Nếu phát sinh)*/
 );
 

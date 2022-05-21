@@ -9,11 +9,17 @@ namespace DAO_BLL
 {
     public class NhanVienDAO
     {
-        DataQLKhachSanDataContext dataContext = new DataQLKhachSanDataContext();
-        #region
         /* Createby: 162860 - Vo Hoang Bao Son
            CreatedDate: 01/05/2022
         */
+        #region Properties
+
+        DataQLKhachSanDataContext dataContext = new DataQLKhachSanDataContext();
+
+        #endregion
+
+        #region Methods
+        
         public List<NhanVienCustomBOView> GetNhanVienByTypeId(int intTypeId)
         {
             var lstResult = from objNhanVien in dataContext.tbl_NhanViens
