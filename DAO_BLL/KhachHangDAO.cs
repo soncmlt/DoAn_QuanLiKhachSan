@@ -65,8 +65,9 @@ namespace DAO_BLL
                     objCheckDB.GioiTinh = objKhachHangBO.GioiTinh;
                     objCheckDB.NgaySinh = objKhachHangBO.NgaySinh;
                     objCheckDB.DiaChi = objKhachHangBO.DiaChi;
-                    dataContext.SubmitChanges();
+                    
                 }
+                dataContext.SubmitChanges();
                 return true;
             }
             catch
@@ -96,6 +97,18 @@ namespace DAO_BLL
                 return false;
             }
 
+        }
+
+        public tbl_KhachHang CheckIsExistsCustommer(string strCustomerId)
+        {
+            try
+            {
+                return dataContext.tbl_KhachHangs.Where(x => x.MaKH.Trim() == strCustomerId.Trim()).FirstOrDefault();
+            }
+            catch
+            {
+                return null;
+            }
         }
         #endregion
     }

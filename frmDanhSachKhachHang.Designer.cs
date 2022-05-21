@@ -39,16 +39,14 @@ namespace DoAn_QuanLiKhachSan
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Them = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Sua = new DevExpress.XtraEditors.SimpleButton();
+            this.btn_Xoa = new DevExpress.XtraEditors.SimpleButton();
             this.txt_TenKH = new DevExpress.XtraEditors.TextEdit();
             this.txt_MaKH = new DevExpress.XtraEditors.TextEdit();
             this.txt_SDT = new DevExpress.XtraEditors.TextEdit();
             this.txt_DiaChi = new DevExpress.XtraEditors.TextEdit();
             this.labelControl6 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl5 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
             this.cbo_GioiTinh = new DevExpress.XtraEditors.LookUpEdit();
@@ -70,7 +68,6 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DiaChi.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_GioiTinh.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_NgaySinh.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_NgaySinh.Properties)).BeginInit();
@@ -119,8 +116,6 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel2.Controls.Add(this.txt_SDT, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.txt_DiaChi, 1, 6);
             this.tableLayoutPanel2.Controls.Add(this.labelControl6, 0, 6);
-            this.tableLayoutPanel2.Controls.Add(this.labelControl5, 0, 5);
-            this.tableLayoutPanel2.Controls.Add(this.textEdit4, 1, 5);
             this.tableLayoutPanel2.Controls.Add(this.labelControl4, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.labelControl7, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.cbo_GioiTinh, 1, 3);
@@ -176,9 +171,9 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33335F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Controls.Add(this.simpleButton1, 0, 0);
-            this.tableLayoutPanel3.Controls.Add(this.simpleButton2, 1, 0);
-            this.tableLayoutPanel3.Controls.Add(this.simpleButton3, 2, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_Them, 0, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_Sua, 1, 0);
+            this.tableLayoutPanel3.Controls.Add(this.btn_Xoa, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 291);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
@@ -187,38 +182,41 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel3.Size = new System.Drawing.Size(1160, 73);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
-            // simpleButton1
+            // btn_Them
             // 
-            this.simpleButton1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton1.Location = new System.Drawing.Point(3, 3);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(380, 67);
-            this.simpleButton1.TabIndex = 0;
-            this.simpleButton1.Text = "Thêm";
+            this.btn_Them.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Them.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_Them.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btn_Them.Location = new System.Drawing.Point(3, 3);
+            this.btn_Them.Name = "btn_Them";
+            this.btn_Them.Size = new System.Drawing.Size(380, 67);
+            this.btn_Them.TabIndex = 0;
+            this.btn_Them.Text = "Thêm";
+            this.btn_Them.Click += new System.EventHandler(this.btn_Them_Click);
             // 
-            // simpleButton2
+            // btn_Sua
             // 
-            this.simpleButton2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(389, 3);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(380, 67);
-            this.simpleButton2.TabIndex = 0;
-            this.simpleButton2.Text = "Sửa";
+            this.btn_Sua.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Sua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btn_Sua.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btn_Sua.Location = new System.Drawing.Point(389, 3);
+            this.btn_Sua.Name = "btn_Sua";
+            this.btn_Sua.Size = new System.Drawing.Size(380, 67);
+            this.btn_Sua.TabIndex = 0;
+            this.btn_Sua.Text = "Sửa";
+            this.btn_Sua.Click += new System.EventHandler(this.btn_Sua_Click);
             // 
-            // simpleButton3
+            // btn_Xoa
             // 
-            this.simpleButton3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(775, 3);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(382, 67);
-            this.simpleButton3.TabIndex = 0;
-            this.simpleButton3.Text = "Xoá";
+            this.btn_Xoa.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btn_Xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btn_Xoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
+            this.btn_Xoa.Location = new System.Drawing.Point(775, 3);
+            this.btn_Xoa.Name = "btn_Xoa";
+            this.btn_Xoa.Size = new System.Drawing.Size(382, 67);
+            this.btn_Xoa.TabIndex = 0;
+            this.btn_Xoa.Text = "Xoá";
+            this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
             // txt_TenKH
             // 
@@ -237,6 +235,7 @@ namespace DoAn_QuanLiKhachSan
             this.txt_MaKH.Properties.AutoHeight = false;
             this.txt_MaKH.Size = new System.Drawing.Size(811, 30);
             this.txt_MaKH.TabIndex = 2;
+            this.txt_MaKH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_MaKH_KeyPress);
             // 
             // txt_SDT
             // 
@@ -246,6 +245,7 @@ namespace DoAn_QuanLiKhachSan
             this.txt_SDT.Properties.AutoHeight = false;
             this.txt_SDT.Size = new System.Drawing.Size(811, 30);
             this.txt_SDT.TabIndex = 2;
+            this.txt_SDT.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_SDT_KeyPress);
             // 
             // txt_DiaChi
             // 
@@ -264,24 +264,6 @@ namespace DoAn_QuanLiKhachSan
             this.labelControl6.Size = new System.Drawing.Size(343, 30);
             this.labelControl6.TabIndex = 0;
             this.labelControl6.Text = "Địa chỉ";
-            // 
-            // labelControl5
-            // 
-            this.labelControl5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl5.Location = new System.Drawing.Point(3, 183);
-            this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(343, 30);
-            this.labelControl5.TabIndex = 0;
-            this.labelControl5.Text = "Email";
-            // 
-            // textEdit4
-            // 
-            this.textEdit4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textEdit4.Location = new System.Drawing.Point(352, 183);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Properties.AutoHeight = false;
-            this.textEdit4.Size = new System.Drawing.Size(811, 30);
-            this.textEdit4.TabIndex = 2;
             // 
             // labelControl4
             // 
@@ -419,7 +401,6 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.txt_MaKH.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_SDT.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_DiaChi.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cbo_GioiTinh.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_NgaySinh.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtp_NgaySinh.Properties)).EndInit();
@@ -438,20 +419,18 @@ namespace DoAn_QuanLiKhachSan
         private LabelControl labelControl2;
         private LabelControl labelControl3;
         private LabelControl labelControl4;
-        private LabelControl labelControl5;
         private LabelControl labelControl6;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private TextEdit txt_TenKH;
         private TextEdit txt_MaKH;
         private TextEdit txt_SDT;
         private TextEdit txt_DiaChi;
-        private TextEdit textEdit4;
         private LabelControl labelControl7;
         private LookUpEdit cbo_GioiTinh;
         private DateEdit dtp_NgaySinh;
-        private SimpleButton simpleButton1;
-        private SimpleButton simpleButton2;
-        private SimpleButton simpleButton3;
+        private SimpleButton btn_Them;
+        private SimpleButton btn_Sua;
+        private SimpleButton btn_Xoa;
         private GroupControl groupControl1;
         private GroupControl groupControl3;
         private System.Windows.Forms.DataGridView dgv_KhachHang;
