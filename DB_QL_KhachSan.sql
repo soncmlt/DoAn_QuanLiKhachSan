@@ -87,7 +87,7 @@ Create Table tbl_HoaDon
 
 Insert into tbl_LoaiNhanVien Values ('Admin');
 Insert into tbl_NhanVien Values ('0703051386',N'Võ Hoàng Bảo Sơn', '1', 1, N'Nam');
-
+INsert into tbl_KhachHang values ('261610133', N'Võ Hoàng Bảo Sơn', '0703051386', N'Nam', '2000-06-17', N'Tp.Hồ Chí Minh');
 alter table tbl_NhanVien
 alter column GioiTinh nvarchar(10)
 
@@ -96,3 +96,4 @@ select * from tbl_Phong
 Insert into tbl_LoaiPhong Values (N'Phòng Đơn', 1, 30000, 300000, 1500000);
 Insert into tbl_Phong Values (N'Phòng Sơn Tạo', 1, N'Chưa thuê');
 delete tbl_LoaiPhong
+select * from tbl_KhachHang
