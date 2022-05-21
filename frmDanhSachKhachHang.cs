@@ -231,8 +231,7 @@ namespace DoAn_QuanLiKhachSan
                 e.Handled = true;
         }
 
+
         #endregion
-
-
     }
 }
