@@ -92,5 +92,12 @@ namespace DoAn_QuanLiKhachSan
             frm.Name = "Thanh toán";
             ViewChildForm(frm);
         }
+
+        private void barButtonItem7_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            frmThongTinThuePhong frm = new frmThongTinThuePhong();
+            frm.Name = "Thông tin thuê phòng";
+            ViewChildForm(frm);
+        }
     }
 }
