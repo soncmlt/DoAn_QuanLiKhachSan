@@ -87,8 +87,8 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.76074F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 54.23926F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 36.9338F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 63.0662F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1176, 861);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -98,7 +98,7 @@ namespace DoAn_QuanLiKhachSan
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(1170, 387);
+            this.groupControl1.Size = new System.Drawing.Size(1170, 312);
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Thông tin khách hàng";
             // 
@@ -110,12 +110,12 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.labelControl2, 0, 1);
             this.tableLayoutPanel2.Controls.Add(this.labelControl3, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 8);
+            this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 6);
             this.tableLayoutPanel2.Controls.Add(this.txt_TenKH, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.txt_MaKH, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.txt_SDT, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.txt_DiaChi, 1, 6);
-            this.tableLayoutPanel2.Controls.Add(this.labelControl6, 0, 6);
+            this.tableLayoutPanel2.Controls.Add(this.txt_DiaChi, 1, 5);
+            this.tableLayoutPanel2.Controls.Add(this.labelControl6, 0, 5);
             this.tableLayoutPanel2.Controls.Add(this.labelControl4, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.labelControl7, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.cbo_GioiTinh, 1, 3);
@@ -123,9 +123,7 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(2, 23);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 10;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
+            this.tableLayoutPanel2.RowCount = 8;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
@@ -134,7 +132,7 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 36F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 79F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(1166, 362);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(1166, 287);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // labelControl1
@@ -175,7 +173,7 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel3.Controls.Add(this.btn_Sua, 1, 0);
             this.tableLayoutPanel3.Controls.Add(this.btn_Xoa, 2, 0);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 291);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(3, 219);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -185,7 +183,7 @@ namespace DoAn_QuanLiKhachSan
             // btn_Them
             // 
             this.btn_Them.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Them.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btn_Them.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Them.ImageOptions.Image")));
             this.btn_Them.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btn_Them.Location = new System.Drawing.Point(3, 3);
             this.btn_Them.Name = "btn_Them";
@@ -197,7 +195,7 @@ namespace DoAn_QuanLiKhachSan
             // btn_Sua
             // 
             this.btn_Sua.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Sua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
+            this.btn_Sua.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Sua.ImageOptions.Image")));
             this.btn_Sua.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btn_Sua.Location = new System.Drawing.Point(389, 3);
             this.btn_Sua.Name = "btn_Sua";
@@ -209,7 +207,7 @@ namespace DoAn_QuanLiKhachSan
             // btn_Xoa
             // 
             this.btn_Xoa.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btn_Xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
+            this.btn_Xoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btn_Xoa.ImageOptions.Image")));
             this.btn_Xoa.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.TopCenter;
             this.btn_Xoa.Location = new System.Drawing.Point(775, 3);
             this.btn_Xoa.Name = "btn_Xoa";
@@ -250,7 +248,7 @@ namespace DoAn_QuanLiKhachSan
             // txt_DiaChi
             // 
             this.txt_DiaChi.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txt_DiaChi.Location = new System.Drawing.Point(352, 219);
+            this.txt_DiaChi.Location = new System.Drawing.Point(352, 183);
             this.txt_DiaChi.Name = "txt_DiaChi";
             this.txt_DiaChi.Properties.AutoHeight = false;
             this.txt_DiaChi.Size = new System.Drawing.Size(811, 30);
@@ -259,7 +257,7 @@ namespace DoAn_QuanLiKhachSan
             // labelControl6
             // 
             this.labelControl6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl6.Location = new System.Drawing.Point(3, 219);
+            this.labelControl6.Location = new System.Drawing.Point(3, 183);
             this.labelControl6.Name = "labelControl6";
             this.labelControl6.Size = new System.Drawing.Size(343, 30);
             this.labelControl6.TabIndex = 0;
@@ -313,9 +311,9 @@ namespace DoAn_QuanLiKhachSan
             // 
             this.groupControl3.Controls.Add(this.dgv_KhachHang);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl3.Location = new System.Drawing.Point(3, 396);
+            this.groupControl3.Location = new System.Drawing.Point(3, 321);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(1170, 462);
+            this.groupControl3.Size = new System.Drawing.Size(1170, 537);
             this.groupControl3.TabIndex = 3;
             this.groupControl3.Text = "Thông tin khách trong phòng";
             // 
@@ -337,7 +335,7 @@ namespace DoAn_QuanLiKhachSan
             this.dgv_KhachHang.Name = "dgv_KhachHang";
             this.dgv_KhachHang.ReadOnly = true;
             this.dgv_KhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_KhachHang.Size = new System.Drawing.Size(1166, 437);
+            this.dgv_KhachHang.Size = new System.Drawing.Size(1166, 512);
             this.dgv_KhachHang.TabIndex = 0;
             this.dgv_KhachHang.SelectionChanged += new System.EventHandler(this.dgv_KhachHang_SelectionChanged);
             // 
@@ -390,7 +388,7 @@ namespace DoAn_QuanLiKhachSan
             this.ClientSize = new System.Drawing.Size(1176, 861);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "frmDanhSachKhachHang";
-            this.Text = "frmDanhSachKhachHang";
+            this.Text = "DANH SÁCH KHÁCH HÀNG";
             this.tableLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);

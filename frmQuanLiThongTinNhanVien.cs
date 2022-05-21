@@ -1,14 +1,7 @@
 ﻿using BO;
 using DAO_BLL;
-using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DoAn_QuanLiKhachSan
@@ -36,57 +29,13 @@ namespace DoAn_QuanLiKhachSan
          Note: Khi không có như cầu sử dụng tất cả các method này xin vui lòng xóa!   
          */
         #region Các methods không cần thiết - vui lòng xóa
-        private void labelControl1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl5_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void txt_tenPhong_EditValueChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void cbo_gioiTinh_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dtp_ngaySinh_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_diaChi_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txt_matKhau_EditValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void labelControl7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void labelControl6_Click(object sender, EventArgs e)
         {
 
         }
