@@ -26,7 +26,7 @@ namespace DAO_BLL
                 var lstResult = from objKH in dataContext.tbl_KhachHangs
                                 select new KhachHangBO()
                                 {
-                                    MaKH = objKH.MaKH,
+                                    MaKH = objKH.MaKH.Trim(),
                                     TenKH = objKH.TenKH,
                                     SDT = objKH.SDT,
                                     GioiTinh = objKH.GioiTinh,

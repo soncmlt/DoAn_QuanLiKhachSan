@@ -14,13 +14,14 @@ namespace DAO_BLL
         /* Createby: 162860 - Vo Hoang Bao Son
            CreatedDate: 13/05/2022
         */
-        public IQueryable GetRoomByTyRoomId(int intTypeRoomId)
+        public List<PhongBO> GetRoomByTyRoomId(int intTypeRoomId)
         {
             var objPhongTro = from objPhong in dataContext.tbl_Phongs
                               from objLoaiPhong in dataContext.tbl_LoaiPhongs
                               where objPhong.MaLoaiPhong == objLoaiPhong.MaLoaiPhong && objPhong.MaLoaiPhong == intTypeRoomId
-                              select new { MaLoaiPhong = objPhong.MaLoaiPhong, TenPhong = objPhong.TenPhong, MaPhong = objPhong.MaPhong, TinhTrang = objPhong.TinhTrang };
-            return objPhongTro;
+                              select new PhongBO ()
+                              { MaLoaiPhong = objPhong.MaLoaiPhong, TenPhong = objPhong.TenPhong, MaPhong = objPhong.MaPhong, TinhTrang = objPhong.TinhTrang };
+            return objPhongTro.ToList();
         }
 
         public bool Insert(string strRoomName, int intTypeRoommId, string strStatus)
@@ -86,6 +87,28 @@ namespace DAO_BLL
                                 TinhTrang = objPhong.TinhTrang
                             };
             return lstResult.OrderByDescending(x => x.MaPhong).ToList();
+        }
+
+        public bool UpdateStatus(int intRoomId)
+        {
+            try
+            {
+                var objPhong = dataContext.tbl_Phongs.Where(x => x.MaPhong == intRoomId).FirstOrDefault();
+                if (objPhong != null)
+                {
+                    objPhong.TinhTrang = "Đã thuê";
+                    dataContext.SubmitChanges();
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch
+            {
+                return false;
+            }
         }
         #endregion
     }

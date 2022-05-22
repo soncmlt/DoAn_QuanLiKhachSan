@@ -44,7 +44,7 @@ namespace DoAn_QuanLiKhachSan
             this.dtp_timKiemNgayDat = new DevExpress.XtraEditors.DateEdit();
             this.txt_timKiem = new DevExpress.XtraEditors.TextEdit();
             this.groupControl3 = new DevExpress.XtraEditors.GroupControl();
-            this.dgv_DSPhong = new System.Windows.Forms.DataGridView();
+            this.dgv_DSPhieuThue = new System.Windows.Forms.DataGridView();
             this.col_TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_CMND = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,7 +85,7 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.txt_timKiem.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).BeginInit();
             this.groupControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhieuThue)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -244,7 +244,7 @@ namespace DoAn_QuanLiKhachSan
             // groupControl3
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.groupControl3, 2);
-            this.groupControl3.Controls.Add(this.dgv_DSPhong);
+            this.groupControl3.Controls.Add(this.dgv_DSPhieuThue);
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(3, 143);
             this.groupControl3.Name = "groupControl3";
@@ -252,21 +252,21 @@ namespace DoAn_QuanLiKhachSan
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Danh sách phòng";
             // 
-            // dgv_DSPhong
+            // dgv_DSPhieuThue
             // 
-            this.dgv_DSPhong.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_DSPhong.ColumnHeadersHeight = 36;
-            this.dgv_DSPhong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dgv_DSPhong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_DSPhieuThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_DSPhieuThue.ColumnHeadersHeight = 36;
+            this.dgv_DSPhieuThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dgv_DSPhieuThue.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.col_TenPhong,
             this.col_CMND,
             this.col_TenKH,
             this.col_NgayDat});
-            this.dgv_DSPhong.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgv_DSPhong.Location = new System.Drawing.Point(2, 23);
-            this.dgv_DSPhong.Name = "dgv_DSPhong";
-            this.dgv_DSPhong.Size = new System.Drawing.Size(547, 451);
-            this.dgv_DSPhong.TabIndex = 0;
+            this.dgv_DSPhieuThue.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgv_DSPhieuThue.Location = new System.Drawing.Point(2, 23);
+            this.dgv_DSPhieuThue.Name = "dgv_DSPhieuThue";
+            this.dgv_DSPhieuThue.Size = new System.Drawing.Size(547, 451);
+            this.dgv_DSPhieuThue.TabIndex = 0;
             // 
             // col_TenPhong
             // 
@@ -582,7 +582,7 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.txt_timKiem.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhieuThue)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -616,7 +616,7 @@ namespace DoAn_QuanLiKhachSan
         private DevExpress.XtraEditors.LabelControl labelControl2;
         private DevExpress.XtraEditors.LabelControl labelControl3;
         private DevExpress.XtraEditors.GroupControl groupControl3;
-        private System.Windows.Forms.DataGridView dgv_DSPhong;
+        private System.Windows.Forms.DataGridView dgv_DSPhieuThue;
         private LookUpEdit cbo_timKiemTenPhong;
         private DateEdit dtp_timKiemNgayDat;
         private GroupControl groupControl4;

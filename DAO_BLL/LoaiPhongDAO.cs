@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BO;
 
 namespace DAO_BLL
 {
@@ -15,9 +16,19 @@ namespace DAO_BLL
         */
 
         //Lấy tất cả cả loại phòng
-        public IQueryable GetAllTypeRoom()
+        public List<LoaiPhongBO> GetAllTypeRoom()
         {
-            return dataContext.tbl_LoaiPhongs.Select(t => t);
+            var lstResult = from objLoaiPhong in dataContext.tbl_LoaiPhongs
+                            select new LoaiPhongBO()
+                            {
+                                MaLoaiPhong = objLoaiPhong.MaLoaiPhong,
+                                TenLoai = objLoaiPhong.TenLoai,
+                                SoGiuong = objLoaiPhong.SoGiuong,
+                                GiaGio = objLoaiPhong.GiaGio,
+                                GiaNgay = objLoaiPhong.GiaNgay,
+                                GiaThang = objLoaiPhong.GiaThang
+                            };
+            return lstResult.OrderByDescending(x => x.MaLoaiPhong).ToList();
         }
         //Xóa Loại Phòng
         public bool Delete(int intTypeRoomId)
