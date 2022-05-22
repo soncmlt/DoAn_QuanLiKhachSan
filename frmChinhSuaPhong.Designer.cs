@@ -50,6 +50,12 @@ namespace DoAn_QuanLiKhachSan
             this.btn_ThemLoai = new DevExpress.XtraEditors.SimpleButton();
             this.btn_SuaLoai = new DevExpress.XtraEditors.SimpleButton();
             this.btn_XoaLoai = new DevExpress.XtraEditors.SimpleButton();
+            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
+            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
+            this.txt_GiaGio = new DevExpress.XtraEditors.TextEdit();
+            this.txt_GiaNgay = new DevExpress.XtraEditors.TextEdit();
+            this.txt_GiaThang = new DevExpress.XtraEditors.TextEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
@@ -69,12 +75,6 @@ namespace DoAn_QuanLiKhachSan
             this.col_TenPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_LoaiPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.col_TrangThai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl7 = new DevExpress.XtraEditors.LabelControl();
-            this.labelControl8 = new DevExpress.XtraEditors.LabelControl();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
             this.tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
@@ -85,6 +85,9 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.txt_tenLoai.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_soGiuong.Properties)).BeginInit();
             this.tableLayoutPanel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_GiaGio.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_GiaNgay.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_GiaThang.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.tableLayoutPanel4.SuspendLayout();
@@ -96,9 +99,6 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).BeginInit();
             this.groupControl4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -214,9 +214,9 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel2.Controls.Add(this.labelControl8, 0, 4);
             this.tableLayoutPanel2.Controls.Add(this.labelControl1, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.labelControl7, 0, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textEdit1, 1, 2);
-            this.tableLayoutPanel2.Controls.Add(this.textEdit2, 1, 3);
-            this.tableLayoutPanel2.Controls.Add(this.textEdit3, 1, 4);
+            this.tableLayoutPanel2.Controls.Add(this.txt_GiaGio, 1, 2);
+            this.tableLayoutPanel2.Controls.Add(this.txt_GiaNgay, 1, 3);
+            this.tableLayoutPanel2.Controls.Add(this.txt_GiaThang, 1, 4);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.tableLayoutPanel2.Location = new System.Drawing.Point(10, 31);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
@@ -265,6 +265,7 @@ namespace DoAn_QuanLiKhachSan
             this.txt_soGiuong.Properties.AutoHeight = false;
             this.txt_soGiuong.Size = new System.Drawing.Size(269, 30);
             this.txt_soGiuong.TabIndex = 1;
+            this.txt_soGiuong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_soGiuong_KeyPress);
             // 
             // tableLayoutPanel3
             // 
@@ -281,8 +282,8 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 124F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 124F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 71F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(544, 71);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
@@ -321,6 +322,63 @@ namespace DoAn_QuanLiKhachSan
             this.btn_XoaLoai.TabIndex = 0;
             this.btn_XoaLoai.Text = "Xoá";
             this.btn_XoaLoai.Click += new System.EventHandler(this.btn_XoaLoai_Click);
+            // 
+            // labelControl8
+            // 
+            this.labelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl8.Location = new System.Drawing.Point(3, 147);
+            this.labelControl8.Name = "labelControl8";
+            this.labelControl8.Size = new System.Drawing.Size(269, 30);
+            this.labelControl8.TabIndex = 3;
+            this.labelControl8.Text = "Giá theo tháng";
+            // 
+            // labelControl1
+            // 
+            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl1.Location = new System.Drawing.Point(3, 111);
+            this.labelControl1.Name = "labelControl1";
+            this.labelControl1.Size = new System.Drawing.Size(269, 30);
+            this.labelControl1.TabIndex = 3;
+            this.labelControl1.Text = "Giá theo ngày";
+            // 
+            // labelControl7
+            // 
+            this.labelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.labelControl7.Location = new System.Drawing.Point(3, 75);
+            this.labelControl7.Name = "labelControl7";
+            this.labelControl7.Size = new System.Drawing.Size(269, 30);
+            this.labelControl7.TabIndex = 3;
+            this.labelControl7.Text = "Giá theo giờ";
+            // 
+            // txt_GiaGio
+            // 
+            this.txt_GiaGio.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_GiaGio.Location = new System.Drawing.Point(278, 75);
+            this.txt_GiaGio.Name = "txt_GiaGio";
+            this.txt_GiaGio.Properties.AutoHeight = false;
+            this.txt_GiaGio.Size = new System.Drawing.Size(269, 30);
+            this.txt_GiaGio.TabIndex = 4;
+            this.txt_GiaGio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_GiaGio_KeyPress);
+            // 
+            // txt_GiaNgay
+            // 
+            this.txt_GiaNgay.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_GiaNgay.Location = new System.Drawing.Point(278, 111);
+            this.txt_GiaNgay.Name = "txt_GiaNgay";
+            this.txt_GiaNgay.Properties.AutoHeight = false;
+            this.txt_GiaNgay.Size = new System.Drawing.Size(269, 30);
+            this.txt_GiaNgay.TabIndex = 4;
+            this.txt_GiaNgay.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_GiaNgay_KeyPress);
+            // 
+            // txt_GiaThang
+            // 
+            this.txt_GiaThang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_GiaThang.Location = new System.Drawing.Point(278, 147);
+            this.txt_GiaThang.Name = "txt_GiaThang";
+            this.txt_GiaThang.Properties.AutoHeight = false;
+            this.txt_GiaThang.Size = new System.Drawing.Size(269, 30);
+            this.txt_GiaThang.TabIndex = 4;
+            this.txt_GiaThang.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_GiaThang_KeyPress);
             // 
             // groupControl2
             // 
@@ -541,60 +599,6 @@ namespace DoAn_QuanLiKhachSan
             this.col_TrangThai.HeaderText = "Trạng thái";
             this.col_TrangThai.Name = "col_TrangThai";
             // 
-            // labelControl1
-            // 
-            this.labelControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl1.Location = new System.Drawing.Point(3, 111);
-            this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(269, 30);
-            this.labelControl1.TabIndex = 3;
-            this.labelControl1.Text = "Giá theo ngày";
-            // 
-            // labelControl7
-            // 
-            this.labelControl7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl7.Location = new System.Drawing.Point(3, 75);
-            this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(269, 30);
-            this.labelControl7.TabIndex = 3;
-            this.labelControl7.Text = "Giá theo giờ";
-            // 
-            // labelControl8
-            // 
-            this.labelControl8.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.labelControl8.Location = new System.Drawing.Point(3, 147);
-            this.labelControl8.Name = "labelControl8";
-            this.labelControl8.Size = new System.Drawing.Size(269, 30);
-            this.labelControl8.TabIndex = 3;
-            this.labelControl8.Text = "Giá theo tháng";
-            // 
-            // textEdit1
-            // 
-            this.textEdit1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textEdit1.Location = new System.Drawing.Point(278, 75);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Properties.AutoHeight = false;
-            this.textEdit1.Size = new System.Drawing.Size(269, 30);
-            this.textEdit1.TabIndex = 4;
-            // 
-            // textEdit2
-            // 
-            this.textEdit2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textEdit2.Location = new System.Drawing.Point(278, 111);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Properties.AutoHeight = false;
-            this.textEdit2.Size = new System.Drawing.Size(269, 30);
-            this.textEdit2.TabIndex = 4;
-            // 
-            // textEdit3
-            // 
-            this.textEdit3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.textEdit3.Location = new System.Drawing.Point(278, 147);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Properties.AutoHeight = false;
-            this.textEdit3.Size = new System.Drawing.Size(269, 30);
-            this.textEdit3.TabIndex = 4;
-            // 
             // frmChinhSuaPhong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -614,6 +618,9 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.txt_tenLoai.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txt_soGiuong.Properties)).EndInit();
             this.tableLayoutPanel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_GiaGio.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_GiaNgay.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_GiaThang.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -626,9 +633,6 @@ namespace DoAn_QuanLiKhachSan
             ((System.ComponentModel.ISupportInitialize)(this.groupControl4)).EndInit();
             this.groupControl4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_DSPhong)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
             this.ResumeLayout(false);
 
 		}
@@ -676,8 +680,8 @@ namespace DoAn_QuanLiKhachSan
         private LabelControl labelControl8;
         private LabelControl labelControl1;
         private LabelControl labelControl7;
-        private TextEdit textEdit1;
-        private TextEdit textEdit2;
-        private TextEdit textEdit3;
+        private TextEdit txt_GiaGio;
+        private TextEdit txt_GiaNgay;
+        private TextEdit txt_GiaThang;
     }
 }

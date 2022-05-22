@@ -20,8 +20,22 @@ namespace DoAn_QuanLiKhachSan
         public frmDanhSachPhong()
         {
             InitializeComponent();
+            txt_maPhong.ReadOnly = true;
+            txt_tenPhong.ReadOnly = true;
+            txt_trangThai.ReadOnly = true;
+            txt_loaiPhong.ReadOnly = true;
+            DynamicUserControls();
+            List<PhongBO> lstPhong = new List<PhongBO>();
+            lstPhong = objPhongDAO.LoadMenuRoom();
+            int soluong = lstPhong.Count();
+            for (int i = 0; i < lstPhong.Count(); i++)
+            {
+                TreeNode node = new TreeNode(lstPhong[i].TenPhong);
+                trv_DSTenPhong.Nodes.Add(node);
+
+            }
         }
-        //XuLy xl = new XuLy();
+
         private void labelControl1_Click(object sender, EventArgs e)
         {
 

@@ -2,7 +2,7 @@
   <Connection Mode="AppSettings" ConnectionString="Data Source=162860-VHBSON;Initial Catalog=QL_KhachSan;Integrated Security=True" SettingsObjectName="DAO_BLL.Properties.Settings" SettingsPropertyName="QL_KhachSanConnectionString" Provider="System.Data.SqlClient" />
   <Table Name="dbo.tbl_HinhThuc" Member="tbl_HinhThucs">
     <Type Name="tbl_HinhThuc">
-      <Column Name="MaHinhThuc" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="MaHinhThuc" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenHinhThuc" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
       <Association Name="tbl_HinhThuc_tbl_PhieuThue" Member="tbl_PhieuThues" ThisKey="MaHinhThuc" OtherKey="MaHinhThuc" Type="tbl_PhieuThue" />
     </Type>
@@ -73,7 +73,7 @@
       <Column Name="MaPhieuThue" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
       <Column Name="MaPhong" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Column Name="MaHinhThuc" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
-      <Column Name="GioVao" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="NgayDat" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
       <Column Name="TinhTrang" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
       <Column Name="MaKH" Type="System.String" DbType="Char(10) NOT NULL" CanBeNull="false" />
       <Association Name="tbl_PhieuThue_tbl_HoaDon" Member="tbl_HoaDons" ThisKey="MaPhieuThue" OtherKey="MaPhieuThue" Type="tbl_HoaDon" />

@@ -47,7 +47,7 @@ Create Table tbl_Phong
 
 Create Table tbl_HinhThuc
 (
-	MaHinhThuc int identity (1,1) primary key not null,
+	MaHinhThuc int primary key not null,
 	TenHinhThuc nvarchar (50)
 );
 
@@ -67,7 +67,7 @@ Create Table tbl_PhieuThue
 	MaPhieuThue int identity (1,1) primary key not null,
 	MaPhong int not null,
 	MaHinhThuc int not null,
-	GioVao DateTime,
+	NgayDat DateTime,
 	TinhTrang bit, /*Có thể xét true fale cho trường hợp chưa thanh toán và đã thanh toán*/
 	MaKH Char(10) not null,
 	Constraint "FK_Phong_PhieuThue" foreign key (MaPhong) references  tbl_Phong(MaPhong),
@@ -97,3 +97,14 @@ Insert into tbl_LoaiPhong Values (N'Phòng Đơn', 1, 30000, 300000, 1500000);
 Insert into tbl_Phong Values (N'Phòng Sơn Tạo', 1, N'Chưa thuê');
 delete tbl_LoaiPhong
 select * from tbl_KhachHang
+
+insert into tbl_HinhThuc values (1, N'Thuê theo giờ');
+insert into tbl_HinhThuc values (2, N'Thuê theo ngày');
+insert into tbl_HinhThuc values (3, N'Thuê theo tháng');
+
+select * from tbl_HinhThuc
+
+update tbl_Phong
+set TinhTrang = N'Chưa thuê' where MaPhong = 1
+
+delete  tbl_PhieuThue

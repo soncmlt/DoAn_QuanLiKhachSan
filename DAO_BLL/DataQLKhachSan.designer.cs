@@ -179,7 +179,7 @@ namespace DAO_BLL
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHinhThuc", AutoSync=AutoSync.OnInsert, DbType="Int NOT NULL IDENTITY", IsPrimaryKey=true, IsDbGenerated=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHinhThuc", DbType="Int NOT NULL", IsPrimaryKey=true)]
 		public int MaHinhThuc
 		{
 			get
@@ -1460,7 +1460,7 @@ namespace DAO_BLL
 		
 		private int _MaHinhThuc;
 		
-		private System.Nullable<System.DateTime> _GioVao;
+		private System.Nullable<System.DateTime> _NgayDat;
 		
 		private System.Nullable<bool> _TinhTrang;
 		
@@ -1484,8 +1484,8 @@ namespace DAO_BLL
     partial void OnMaPhongChanged();
     partial void OnMaHinhThucChanging(int value);
     partial void OnMaHinhThucChanged();
-    partial void OnGioVaoChanging(System.Nullable<System.DateTime> value);
-    partial void OnGioVaoChanged();
+    partial void OnNgayDatChanging(System.Nullable<System.DateTime> value);
+    partial void OnNgayDatChanged();
     partial void OnTinhTrangChanging(System.Nullable<bool> value);
     partial void OnTinhTrangChanged();
     partial void OnMaKHChanging(string value);
@@ -1569,22 +1569,22 @@ namespace DAO_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioVao", DbType="DateTime")]
-		public System.Nullable<System.DateTime> GioVao
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_NgayDat", DbType="DateTime")]
+		public System.Nullable<System.DateTime> NgayDat
 		{
 			get
 			{
-				return this._GioVao;
+				return this._NgayDat;
 			}
 			set
 			{
-				if ((this._GioVao != value))
+				if ((this._NgayDat != value))
 				{
-					this.OnGioVaoChanging(value);
+					this.OnNgayDatChanging(value);
 					this.SendPropertyChanging();
-					this._GioVao = value;
-					this.SendPropertyChanged("GioVao");
-					this.OnGioVaoChanged();
+					this._NgayDat = value;
+					this.SendPropertyChanged("NgayDat");
+					this.OnNgayDatChanged();
 				}
 			}
 		}

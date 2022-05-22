@@ -41,9 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="HinhThucBO.cs" />
     <Compile Include="KhachHangBO.cs" />
     <Compile Include="LoaiNhanVienBO.cs" />
     <Compile Include="NhanVienBO.cs" />
+    <Compile Include="PhieuThueBO.cs" />
     <Compile Include="PhongBO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

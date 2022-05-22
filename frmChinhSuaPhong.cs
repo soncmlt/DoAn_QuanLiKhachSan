@@ -44,6 +44,9 @@ namespace DoAn_QuanLiKhachSan
                 txt_tenLoai.Text = dgv_DSLoaiPhong["col_TenLoai", index].Value.ToString().Trim();
                 txt_soGiuong.Text = dgv_DSLoaiPhong["col_SoGiuong", index].Value.ToString().Trim();
                 txt_MaLoaiPhong.Text = dgv_DSLoaiPhong["col_TenLoai", index].Value.ToString().Trim();
+                txt_GiaGio.Text = dgv_DSLoaiPhong["col_GiaGio", index].Value.ToString().Trim();
+                txt_GiaNgay.Text = dgv_DSLoaiPhong["col_GiaNgay", index].Value.ToString().Trim();
+                txt_GiaThang.Text = dgv_DSLoaiPhong["col_GiaThang", index].Value.ToString().Trim();
                 GetDataRoomByTypeRoomId(int.Parse(dgv_DSLoaiPhong["col_MaLoai", index].Value.ToString().Trim()));
                 CheckDataTypeRooome();
             }
@@ -131,6 +134,9 @@ namespace DoAn_QuanLiKhachSan
             try
             {
                 int intSoGiuong = -1;
+                int intPriceHoure = -1;
+                int intPriceDay = -1;
+                int intPriceMonth = -1;
                 if (string.IsNullOrEmpty(txt_tenLoai.Text.Trim()) || string.IsNullOrEmpty(txt_soGiuong.Text.Trim()))
                 {
                     MessageBox.Show("Dữ liệu thêm mới không được bỏ trống. Xin vui lòng kiểm tra lại!");
@@ -139,10 +145,19 @@ namespace DoAn_QuanLiKhachSan
                 else if (!int.TryParse(txt_soGiuong.Text.Trim(), out intSoGiuong))
                 {
                     MessageBox.Show("Số giường phải là kiểu số nguyên > 0. Xin vui lòng kiểm tra lại!");
+                    return;
+                }
+                else if (string.IsNullOrEmpty(txt_GiaGio.Text.Trim()) || string.IsNullOrEmpty(txt_GiaNgay.Text.Trim()) || string.IsNullOrEmpty(txt_GiaThang.Text.Trim()))
+                {
+                    MessageBox.Show("Thông tin về giá không được bỏ trống. Xin vui lòng kiểm tra lại!");
+                    return;
                 }
                 else
                 {
-                    if (objLoaiPhongDAO.Insert(txt_tenLoai.Text, intSoGiuong, 2000, 2000, 2000))
+                    intPriceHoure = int.Parse(txt_GiaGio.Text.Trim());
+                    intPriceDay = int.Parse(txt_GiaNgay.Text.Trim());
+                    intPriceMonth = int.Parse(txt_GiaThang.Text.Trim());
+                    if (objLoaiPhongDAO.Insert(txt_tenLoai.Text, intSoGiuong, intPriceHoure, intPriceDay, intPriceMonth))
                     {
                         MessageBox.Show("Thêm loại phòng thành công!");
                         LoadTypeRoom();
@@ -180,7 +195,12 @@ namespace DoAn_QuanLiKhachSan
                 btn_SuaLoai.Enabled = false;
                 btn_XoaLoai.Enabled = false;
             }
-            if (dgv_DSPhong.DataSource == null || dgv_DSPhong.Rows.Count == 0)
+            if (dgv_DSLoaiPhong.DataSource != null || dgv_DSLoaiPhong.Rows.Count > 0)
+            {
+                btn_SuaLoai.Enabled = true;
+                btn_XoaLoai.Enabled = true;
+            }
+            if (dgv_DSPhong.DataSource == null || dgv_DSPhong.Rows.Count== 0)
             {
                 btn_SuaPhong.Enabled = false;
                 btn_XoaPhong.Enabled = false;
@@ -296,6 +316,30 @@ namespace DoAn_QuanLiKhachSan
                 string strMessErr = "Lỗi trong quá trình sửa loại phòng trên UI";
                 throw new Exception(strMessErr, ex);
             }
+        }
+
+        private void txt_GiaGio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txt_GiaNgay_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txt_soGiuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
+        }
+
+        private void txt_GiaThang_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar) && !Char.IsControl(e.KeyChar))
+                e.Handled = true;
         }
     }
 }

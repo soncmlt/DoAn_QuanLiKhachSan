@@ -14,4 +14,15 @@ namespace BO
         public string TinhTrang { get; set; }
         public string TenLoai { get; set; }
     }
+
+    public class LoaiPhongBO
+    {
+        public int MaLoaiPhong { get; set; }
+        public string TenLoai { get; set; }
+        public int? SoGiuong { get; set; }
+        public int? GiaGio { get; set; }
+        public int? GiaNgay { get; set; }
+        public int? GiaThang { get; set; }
+    }
+
 }
