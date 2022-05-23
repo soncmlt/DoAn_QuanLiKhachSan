@@ -79,32 +79,32 @@ Create Table tbl_HoaDon
 (
 	MaHD int identity (1,1) primary key not null,
 	MaPhieuThue int not null,
-	GioVao DateTime,
-	GioRa DateTime,
-	TongTien int,
+	MaKH char(10) not null,
+	MaPhong int not null,
+	GioVao DateTime not null,
+	GioRa DateTime not null,
+	ThoiGianThue float not null,
+	MaHinhThuc int not null,
+	TongTien float not null,
 	Constraint "FK_PhieuThue_HoaDon" foreign key (MaPhieuThue) references  tbl_PhieuThue(MaPhieuThue)
 );
 
+
+
+/*Bộ data này lưu ý nhớ thêm vào trước khi chạy App*/
+
+/*Loại nhân viên*/
 Insert into tbl_LoaiNhanVien Values ('Admin');
-Insert into tbl_NhanVien Values ('0703051386',N'Võ Hoàng Bảo Sơn', '1', 1, N'Nam');
+/*Nhân viên*/
+Insert into tbl_NhanVien Values ('0703051386',N'Võ Hoàng Bảo Sơn', '1', 1, N'Nam',N'Tp.Hồ Chí Minh', '2000-06-17');
+/*Khách hàng*/
 INsert into tbl_KhachHang values ('261610133', N'Võ Hoàng Bảo Sơn', '0703051386', N'Nam', '2000-06-17', N'Tp.Hồ Chí Minh');
-alter table tbl_NhanVien
-alter column GioiTinh nvarchar(10)
-
-select * from tbl_LoaiPhong
-select * from tbl_Phong
-Insert into tbl_LoaiPhong Values (N'Phòng Đơn', 1, 30000, 300000, 1500000);
-Insert into tbl_Phong Values (N'Phòng Sơn Tạo', 1, N'Chưa thuê');
-delete tbl_LoaiPhong
-select * from tbl_KhachHang
-
+/*Hình thức*/
 insert into tbl_HinhThuc values (1, N'Thuê theo giờ');
 insert into tbl_HinhThuc values (2, N'Thuê theo ngày');
 insert into tbl_HinhThuc values (3, N'Thuê theo tháng');
 
-select * from tbl_HinhThuc
 
-update tbl_Phong
-set TinhTrang = N'Chưa thuê' where MaPhong = 1
-
-delete  tbl_PhieuThue
+--Không cần thiết
+Insert into tbl_LoaiPhong Values (N'Phòng Đơn', 1, 30000, 300000, 1500000);
+Insert into tbl_Phong Values (N'Phòng Sơn Tạo', 1, N'Chưa thuê');
