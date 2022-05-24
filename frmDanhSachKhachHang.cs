@@ -43,7 +43,7 @@ namespace DoAn_QuanLiKhachSan
                 txt_MaKH.Text = dgv_KhachHang["col_MaKH", index].Value.ToString().Trim();
                 txt_SDT.Text = dgv_KhachHang["col_SDT", index].Value.ToString().Trim();
                 cbo_GioiTinh.EditValue = dgv_KhachHang["col_GioiTinh", index].Value.ToString().Trim();
-                dtp_NgaySinh.Text = DateTime.Parse(dgv_KhachHang["col_NgaySinh", index].Value.ToString().Trim()).ToString("dd/MM/yyyy");
+                dtp_NgaySinh.EditValue = dgv_KhachHang["col_NgaySinh", index].Value.ToString().Trim();
                 if (dgv_KhachHang["col_DiaChi", index].Value != null)
                 {
                     txt_DiaChi.Text = dgv_KhachHang["col_DiaChi", index].Value.ToString().Trim();

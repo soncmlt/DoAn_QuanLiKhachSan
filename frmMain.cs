@@ -58,25 +58,11 @@ namespace DoAn_QuanLiKhachSan
             ViewChildForm(frm);
         }
 
-        private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            frmThongTinNhanVien frm = new frmThongTinNhanVien();
-            frm.Name = "Thông tin nhân viên";
-            ViewChildForm(frm);
-        }
-
         private void barButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
         {
             frmQuanLiThongTinNhanVien frm = new frmQuanLiThongTinNhanVien();
             frm.Name = "Quản lí thông tin nhân viên";
             ViewChildForm(frm);
-        }
-
-        private void barButtonItem3_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            frmThayDoiMatKhau frm = new frmThayDoiMatKhau();
-            frm.Name = "Thay đổi mật khẩu";
-            frm.ShowDialog();
         }
 
         private void barButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
@@ -98,6 +84,11 @@ namespace DoAn_QuanLiKhachSan
             frmThongTinThuePhong frm = new frmThongTinThuePhong();
             frm.Name = "Thông tin thuê phòng";
             ViewChildForm(frm);
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program.frmDangNhap.Show();
         }
     }
 }

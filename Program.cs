@@ -17,7 +17,8 @@ namespace DoAn_QuanLiKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmMain());
+            frmDangNhap = new FrmDangNhap();
+            Application.Run(frmDangNhap);
         }
     }
 }

@@ -19,7 +19,23 @@ namespace DAO_BLL
         #endregion
 
         #region Methods
-        
+        public NhanVienBO GetInfoNhanVien(string strUserName)
+        {
+            var result = from objNhanVien in dataContext.tbl_NhanViens
+                         where objNhanVien.MaNV == strUserName
+                         select new NhanVienBO()
+                         {
+                             MaNV = objNhanVien.MaNV,
+                             TenNV = objNhanVien.TenNV,
+                             GioiTinh = objNhanVien.GioiTinh,
+                             MaLoaiNV=objNhanVien.MaLoaiNV,
+                             DiaChi = objNhanVien.Diachi,
+                             NgaySinh = objNhanVien.NgaySinh,
+                             MatKhau = objNhanVien.MatKhau
+                         };
+            return result.FirstOrDefault();
+        }
+
         public List<NhanVienCustomBOView> GetNhanVienByTypeId(int intTypeId)
         {
             var lstResult = from objNhanVien in dataContext.tbl_NhanViens
