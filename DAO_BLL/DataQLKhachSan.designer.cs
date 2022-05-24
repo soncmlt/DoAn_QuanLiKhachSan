@@ -478,11 +478,19 @@ namespace DAO_BLL
 		
 		private int _MaPhieuThue;
 		
-		private System.Nullable<System.DateTime> _GioVao;
+		private string _MaKH;
 		
-		private System.Nullable<System.DateTime> _GioRa;
+		private int _MaPhong;
 		
-		private System.Nullable<int> _TongTien;
+		private System.DateTime _GioVao;
+		
+		private System.DateTime _GioRa;
+		
+		private double _ThoiGianThue;
+		
+		private int _MaHinhThuc;
+		
+		private double _TongTien;
 		
 		private EntityRef<tbl_PhieuThue> _tbl_PhieuThue;
 		
@@ -494,11 +502,19 @@ namespace DAO_BLL
     partial void OnMaHDChanged();
     partial void OnMaPhieuThueChanging(int value);
     partial void OnMaPhieuThueChanged();
-    partial void OnGioVaoChanging(System.Nullable<System.DateTime> value);
+    partial void OnMaKHChanging(string value);
+    partial void OnMaKHChanged();
+    partial void OnMaPhongChanging(int value);
+    partial void OnMaPhongChanged();
+    partial void OnGioVaoChanging(System.DateTime value);
     partial void OnGioVaoChanged();
-    partial void OnGioRaChanging(System.Nullable<System.DateTime> value);
+    partial void OnGioRaChanging(System.DateTime value);
     partial void OnGioRaChanged();
-    partial void OnTongTienChanging(System.Nullable<int> value);
+    partial void OnThoiGianThueChanging(double value);
+    partial void OnThoiGianThueChanged();
+    partial void OnMaHinhThucChanging(int value);
+    partial void OnMaHinhThucChanged();
+    partial void OnTongTienChanging(double value);
     partial void OnTongTienChanged();
     #endregion
 		
@@ -552,8 +568,48 @@ namespace DAO_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioVao", DbType="DateTime")]
-		public System.Nullable<System.DateTime> GioVao
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaKH", DbType="Char(10) NOT NULL", CanBeNull=false)]
+		public string MaKH
+		{
+			get
+			{
+				return this._MaKH;
+			}
+			set
+			{
+				if ((this._MaKH != value))
+				{
+					this.OnMaKHChanging(value);
+					this.SendPropertyChanging();
+					this._MaKH = value;
+					this.SendPropertyChanged("MaKH");
+					this.OnMaKHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaPhong", DbType="Int NOT NULL")]
+		public int MaPhong
+		{
+			get
+			{
+				return this._MaPhong;
+			}
+			set
+			{
+				if ((this._MaPhong != value))
+				{
+					this.OnMaPhongChanging(value);
+					this.SendPropertyChanging();
+					this._MaPhong = value;
+					this.SendPropertyChanged("MaPhong");
+					this.OnMaPhongChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioVao", DbType="DateTime NOT NULL")]
+		public System.DateTime GioVao
 		{
 			get
 			{
@@ -572,8 +628,8 @@ namespace DAO_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioRa", DbType="DateTime")]
-		public System.Nullable<System.DateTime> GioRa
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GioRa", DbType="DateTime NOT NULL")]
+		public System.DateTime GioRa
 		{
 			get
 			{
@@ -592,8 +648,48 @@ namespace DAO_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Int")]
-		public System.Nullable<int> TongTien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_ThoiGianThue", DbType="Float NOT NULL")]
+		public double ThoiGianThue
+		{
+			get
+			{
+				return this._ThoiGianThue;
+			}
+			set
+			{
+				if ((this._ThoiGianThue != value))
+				{
+					this.OnThoiGianThueChanging(value);
+					this.SendPropertyChanging();
+					this._ThoiGianThue = value;
+					this.SendPropertyChanged("ThoiGianThue");
+					this.OnThoiGianThueChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaHinhThuc", DbType="Int NOT NULL")]
+		public int MaHinhThuc
+		{
+			get
+			{
+				return this._MaHinhThuc;
+			}
+			set
+			{
+				if ((this._MaHinhThuc != value))
+				{
+					this.OnMaHinhThucChanging(value);
+					this.SendPropertyChanging();
+					this._MaHinhThuc = value;
+					this.SendPropertyChanged("MaHinhThuc");
+					this.OnMaHinhThucChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TongTien", DbType="Float NOT NULL")]
+		public double TongTien
 		{
 			get
 			{

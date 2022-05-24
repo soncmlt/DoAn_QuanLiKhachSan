@@ -48,6 +48,7 @@
       <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="HinhThucDAO.cs" />
+    <Compile Include="HoaDonDAO.cs" />
     <Compile Include="KhachHangDAO.cs" />
     <Compile Include="LoaiNhanVienDAO.cs" />
     <Compile Include="LoaiPhongDAO.cs" />

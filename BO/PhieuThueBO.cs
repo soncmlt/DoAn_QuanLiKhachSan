@@ -14,4 +14,13 @@ namespace BO
         public DateTime? NgayDat { get; set; }
         public string MaKH { get; set; }
     }
+
+    public class PhieuThueCustom
+    {
+        public string TenKH { get; set; }
+        public string MaKH { get; set; }
+        public string TenPhong { get; set; }
+        public DateTime? NgayDat { get; set; }
+        public string TenHinhThuc { get; set; }
+    }
 }

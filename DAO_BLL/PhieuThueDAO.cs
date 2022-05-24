@@ -98,6 +98,67 @@ namespace DAO_BLL
                 return false;
             }
         }
+
+        public List<PhieuThueBO> GetListPhieuThueByDate(DateTime dtFromDate, DateTime dtToDate)
+        {
+            try
+            {
+                var lstPhieuThueBO = from objPT in dataContext.tbl_PhieuThues
+                                     where objPT.TinhTrang == false
+                                     select new PhieuThueBO()
+                                     {
+                                         MaPhieuThue = objPT.MaPhieuThue,
+                                         MaPhong = objPT.MaPhong,
+                                         MaKH = objPT.MaKH,
+                                         MaHinhThuc = objPT.MaHinhThuc,
+                                         NgayDat = objPT.NgayDat
+                                     };
+                List<PhieuThueBO> lstPhieuThue = lstPhieuThueBO.ToList();
+                List<PhieuThueBO> lstResult = new List<PhieuThueBO>();
+                foreach (var item in lstPhieuThue)
+                {
+                    DateTime dtCheck = (DateTime)item.NgayDat;
+                    DateTime dtCheckConvert = new DateTime(dtCheck.Year, dtCheck.Month, dtCheck.Day);
+                    if (DateTime.Compare(dtFromDate, dtCheckConvert) <= 0 && DateTime.Compare(dtToDate, dtCheckConvert) >= 0)
+                    {
+                        lstResult.Add(item);
+                    }
+                }
+                return lstResult;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi tìm kiếm phiếu thuê", ex);
+            }
+        }
+
+        public PhieuThueCustom GetListPhieuThueByDate(int intPhieuThueId)
+        {
+            try
+            {
+                var lstResult = from objPT in dataContext.tbl_PhieuThues
+                                join objKH in dataContext.tbl_KhachHangs
+                                on objPT.MaKH equals objKH.MaKH
+                                join objHT in dataContext.tbl_HinhThucs
+                                on objPT.MaHinhThuc equals objHT.MaHinhThuc
+                                join objPhong in dataContext.tbl_Phongs
+                                on objPT.MaPhong equals objPhong.MaPhong
+                                where objPT.MaPhieuThue == intPhieuThueId && objPT.TinhTrang == false
+                                select new PhieuThueCustom()
+                                {
+                                    TenKH = objKH.TenKH,
+                                    MaKH = objPT.MaKH,
+                                    TenPhong = objPhong.TenPhong,
+                                    NgayDat = objPT.NgayDat,
+                                    TenHinhThuc = objHT.TenHinhThuc
+                                };
+                return lstResult.ToList().FirstOrDefault();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("Lỗi tìm kiếm phiếu thuê", ex);
+            }
+        }
         #endregion
     }
 }
