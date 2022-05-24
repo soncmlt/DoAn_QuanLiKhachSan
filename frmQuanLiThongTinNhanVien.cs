@@ -1,5 +1,6 @@
 ﻿using BO;
 using DAO_BLL;
+using DevExpress.XtraEditors;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -15,13 +16,16 @@ namespace DoAn_QuanLiKhachSan
         #region Properties
         LoaiNhanVienDAO objLoaiNhanVienDAO = new LoaiNhanVienDAO();
         NhanVienDAO objNhanVienDAO = new NhanVienDAO();
+        public NhanVienBO nhanVienBO;
         #endregion
         public frmQuanLiThongTinNhanVien()
         {
+            nhanVienBO = Program.frmDangNhap.nhanVienBO;
             InitializeComponent();
             LoadDatadLoaiPhong();
             LoadDataComboGender();
-            CheckEnable();
+            CheckEnable(false);
+            
         }
 
         /*
@@ -66,6 +70,7 @@ namespace DoAn_QuanLiKhachSan
 
         private void dgv_DSNhanVien_SelectionChanged(object sender, EventArgs e)
         {
+           
             if (dgv_DSNhanVien.DataSource != null && dgv_DSNhanVien.Rows.Count > 0)
             {
                 int index = dgv_DSNhanVien.CurrentCell.RowIndex;
@@ -83,6 +88,19 @@ namespace DoAn_QuanLiKhachSan
 
                 if (dgv_DSNhanVien["col_MatKhau", index].Value != null)
                 {
+                   
+                    if(dgv_DSNhanVien["col_MaNhanVien",index].Value.ToString() == nhanVienBO.MaNV)
+                    {
+                        CheckEnable(true);
+                        txt_matKhau.Enabled = true;
+                        txt_matKhau.Properties.PasswordChar = '\0';
+                    }    
+                    else
+                    {
+                        CheckEnable(false);
+                        txt_matKhau.Enabled = false;
+                        txt_matKhau.Properties.PasswordChar = '*';
+                    }    
                     txt_matKhau.Text = dgv_DSNhanVien["col_MatKhau", index].Value.ToString().Trim();
                 }
                 else
@@ -108,7 +126,7 @@ namespace DoAn_QuanLiKhachSan
                     {
                         MessageBox.Show("Thêm mới chức vụ thành công!");
                         LoadDatadLoaiPhong();
-                        CheckEnable();
+                        CheckEnable(false);
                     }
                     else
                     {
@@ -137,7 +155,7 @@ namespace DoAn_QuanLiKhachSan
                     {
                         MessageBox.Show("Cập nhật chức vụ thành công!");
                         LoadDatadLoaiPhong();
-                        CheckEnable();
+                        CheckEnable(false);
                     }
                     else
                     {
@@ -179,7 +197,7 @@ namespace DoAn_QuanLiKhachSan
                     {
                         MessageBox.Show("Xóa chức vụ thành công!");
                         LoadDatadLoaiPhong();
-                        CheckEnable();
+                        CheckEnable(false);
                     }
                 }
                 else
@@ -329,7 +347,7 @@ namespace DoAn_QuanLiKhachSan
                 {
                     MessageBox.Show("Cập nhật dữ liệu cho nhân viên thành công!");
                     LoadDataNhanVien(model.MaLoaiNV);
-                    CheckEnable();
+                    CheckEnable(false);
                 }
                 else
                 {
@@ -378,7 +396,7 @@ namespace DoAn_QuanLiKhachSan
                         int indexLoaiNV = dgv_ChucVu.CurrentCell.RowIndex;
                         int intMaLoai = int.Parse(dgv_ChucVu["col_MaChucVu", indexLoaiNV].Value.ToString().Trim());
                         LoadDataNhanVien(intMaLoai);
-                        CheckEnable();
+                        CheckEnable(false);
                     }
                     else
                     {
@@ -397,8 +415,9 @@ namespace DoAn_QuanLiKhachSan
             }
         }
 
-        public void CheckEnable()
+        public void CheckEnable(bool check)
         {
+
             if (dgv_ChucVu.DataSource == null || dgv_ChucVu.Rows.Count == 0)
             {
                 btn_SuaLoai.Enabled = false;
@@ -427,6 +446,25 @@ namespace DoAn_QuanLiKhachSan
                 btn_SuaNV.Enabled = true;
                 btn_XoaNV.Enabled = true;
             }
+
+            if (nhanVienBO.MaLoaiNV != 1)
+            {
+                txt_tenChucVu.Enabled = check;
+                txt_SDT.Enabled = check;
+                txt_TenNV.Enabled = check;
+                txt_ChuVu.Enabled = check;
+                dtp_ngaySinh.Enabled = check;
+                cbo_gioiTinh.Enabled = check;
+                txt_diaChi.Enabled = check;
+                txt_matKhau.Enabled = check;
+                btn_ThemNV.Enabled = check;
+                btn_SuaNV.Enabled = check;
+                btn_XoaNV.Enabled = check;
+                btn_ThemLoai.Enabled = check;
+                btn_SuaLoai.Enabled = check;
+                btn_XoaLoai.Enabled = check;
+            }
+
         }
 
         #endregion

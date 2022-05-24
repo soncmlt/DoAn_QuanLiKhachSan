@@ -94,12 +94,6 @@
     <Compile Include="frmThanhToan.Designer.cs">
       <DependentUpon>frmThanhToan.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmThongTinNhanVien.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThongTinNhanVien.Designer.cs">
-      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmDanhSachPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,12 +126,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="frmThayDoiMatKhau.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmThayDoiMatKhau.Designer.cs">
-      <DependentUpon>frmThayDoiMatKhau.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="frmChinhSuaPhong.resx">
       <DependentUpon>frmChinhSuaPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -152,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmThanhToan.resx">
       <DependentUpon>frmThanhToan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmThongTinNhanVien.resx">
-      <DependentUpon>frmThongTinNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDanhSachPhong.resx">
       <DependentUpon>frmDanhSachPhong.cs</DependentUpon>
@@ -181,9 +166,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmThayDoiMatKhau.resx">
-      <DependentUpon>frmThayDoiMatKhau.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

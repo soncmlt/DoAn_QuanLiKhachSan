@@ -286,9 +286,11 @@ namespace DoAn_QuanLiKhachSan
             // txt_matKhau
             // 
             this.txt_matKhau.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txt_matKhau.Enabled = false;
             this.txt_matKhau.Location = new System.Drawing.Point(318, 219);
             this.txt_matKhau.Name = "txt_matKhau";
             this.txt_matKhau.Properties.AutoHeight = false;
+            this.txt_matKhau.Properties.PasswordChar = '*';
             this.txt_matKhau.Size = new System.Drawing.Size(310, 31);
             this.txt_matKhau.TabIndex = 6;
             // 
@@ -615,8 +617,8 @@ namespace DoAn_QuanLiKhachSan
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 1;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
-            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 68F));
             this.tableLayoutPanel3.Size = new System.Drawing.Size(624, 68);
             this.tableLayoutPanel3.TabIndex = 2;
             // 
