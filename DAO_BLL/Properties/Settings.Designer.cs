@@ -27,7 +27,8 @@ namespace DAO_BLL.Properties {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
         //[global::System.Configuration.DefaultSettingValueAttribute("Data Source=162860-VHBSON;Initial Catalog=QL_KhachSan;Integrated Security=True")]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\HQKHANG;Initial Catalog=QL_KhachSan;Integrated Security=True")]
+        //[global::System.Configuration.DefaultSettingValueAttribute("Data Source=MSI\\HQKHANG;Initial Catalog=QL_KhachSan;Integrated Security=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-4NBM1DU;Initial Catalog=QL_KhachSan;User ID=sa;Password=sa2019")]
         public string QL_KhachSanConnectionString {
             get {
                 return ((string)(this["QL_KhachSanConnectionString"]));

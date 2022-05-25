@@ -133,6 +133,32 @@ namespace DAO_BLL
 
         }
         #endregion
-        
+
+        #region TestMethods
+
+        public string TestDangNhap(string tendn, string mk)
+        {
+            if (string.IsNullOrEmpty(tendn) || string.IsNullOrEmpty(mk))
+            {
+                return  ("Tên đăng nhập hoặc Mật khẩu không được bỏ trống. Xin vui lòng kiển tra lại!");
+            }
+            else if (tendn.Length > 10 || mk.Length > 10)
+            {
+                return  ("Tên đăng nhập hoặc Mật khẩu không được vượt quá 10 ký tự. Xin vui lòng kiển tra lại!");
+                
+            }
+            else if (LoadNhanVien(tendn, mk) == null)
+            {
+
+                return ("Tên đăng nhập hoặc Mật khẩu không đúng. Xin vui lòng kiển tra lại!");
+            }
+            else
+            {
+                return  "Đăng nhập thành công";
+            }
+        }
+
+        #endregion
+
     }
 }
