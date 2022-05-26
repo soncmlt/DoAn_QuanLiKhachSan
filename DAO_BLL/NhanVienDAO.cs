@@ -158,6 +158,99 @@ namespace DAO_BLL
             }
         }
 
+
+        public string TestThemNhanVien (NhanVienBO nv, bool isInsert)
+        {
+            try
+            {
+                #region SĐT - Mã nhân viên
+                if (isInsert)
+                {
+                    if (string.IsNullOrEmpty(nv.MaNV))
+                    {
+                        return  ("Số điện thoại nhân viên không được bỏ trống. Xin vui lòng thử lại!");
+                    }
+
+                    if (nv.MaNV.Length > 10)
+                    {
+                        return  ("Số điện thoại nhân viên không được vượt quá 50 ký tự. Xin vui lòng thử lại!");
+                    }
+
+                    tbl_NhanVien objtbl_NhanVien = new tbl_NhanVien();
+                    objtbl_NhanVien = CheckNhanVienExists(nv.MaNV);
+
+                    if (objtbl_NhanVien != null)
+                    {
+                        return  ("Số điện thoại đã được khai báo cho User [" + objtbl_NhanVien.MaNV + " - " + objtbl_NhanVien.TenNV + "]. Xin vui lòng kiểm tra lại");
+                    }
+                }
+                #endregion
+
+                #region Tên nhân viên
+                if (string.IsNullOrEmpty(nv.TenNV))
+                {
+                    return  ("Tên nhân viên không được bỏ trống. Xin vui lòng thử lại!");
+                }
+
+                if (nv.TenNV.Length > 50)
+                {
+                    return ("Tên nhân viên không được vượt quá 50 ký tự. Xin vui lòng thử lại!");
+                }
+                #endregion
+
+                #region Địa chỉ
+                if (!string.IsNullOrEmpty(nv.DiaChi) && nv.DiaChi.Trim().Length > 50)
+                {
+                    return ("Địa chỉ không được vượt quá 50 ký tự. Xin vui lòng thử lại!");
+                }
+                #endregion
+
+                #region Ngày sinh
+                if (nv.NgaySinh == null)
+                {
+                    return ("Ngày sinh không được bỏ trống. Xin vui lòng kiểm tra lại!");
+                }
+                #endregion
+
+                #region Mật khẩu
+                if (string.IsNullOrEmpty(nv.MatKhau))
+                {
+                    return ("Mật khẩu không được bỏ trống. Xin vui lòng thử lại!");
+                }
+
+                if (nv.MatKhau.Trim().Length > 10)
+                {
+                    return ("Mật khẩu không được vượt quá 10 ký tự. Xin vui lòng thử lại!");
+                }
+                #endregion
+
+
+
+                return "Cập nhật dữ liệu cho nhân viên thành công!";
+            }
+            catch (Exception ex)
+            {
+                string strMessErr = "Lỗi trong quá trình kiểm tra thông tin cập nhật nhân viên trên UI";
+                throw new Exception(strMessErr, ex);
+            }
+        }
+        
+        public string TestThemChucVu (string tenCV)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(tenCV))
+                    return "Tên chức vụ không được bỏ trống. Xin vui lòng kiểm tra lại!";
+                else if (tenCV.Length > 50)
+                    return "Tên chức vụ không được vượt quá 50 ký tự. Xin vui lòng kiểm tra lại!";
+                else return "Thêm mới chức vụ thành công!";
+            }
+            catch (Exception ex)
+            {
+                string strMessErr = "Lỗi trong quá trình kiểm tra thông tin cập nhật nhân viên trên UI";
+                throw new Exception(strMessErr, ex);
+            }
+        }
         #endregion
 
     }

@@ -111,5 +111,55 @@ namespace DAO_BLL
             }
         }
         #endregion
+
+        #region TestMethods
+
+        public string TestFormKhachHang (KhachHangBO kh, bool isInsert)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(kh.TenKH) || kh.TenKH.Length > 50)
+                {
+                    return ("Tên khách hàng không được bỏ trống và không được vượt quá 50 ký tự");
+                }
+                if (isInsert)
+                {
+                    if (string.IsNullOrEmpty(kh.MaKH) || kh.MaKH.Length > 10)
+                    {
+                        return ("Số CMND/CCCD không được bỏ trống và không được vượt quá 10 ký tự");
+                    }
+
+                    var objKH = CheckIsExistsCustommer(kh.MaKH);
+                    if (objKH != null)
+                    {
+                        return  ("Mã CMND/CCCD đã được khai báo cho User [" + objKH.MaKH + " - " + objKH.TenKH + "]");
+                    }
+                }
+
+                if (string.IsNullOrEmpty(kh.SDT) || kh.SDT.Length > 10)
+                {
+                    return ("Số điện thoại không được bỏ trống và không được vượt quá 10 số. Xin vui lòng kiểm tra lại!");
+                }
+
+                if (kh.NgaySinh == null)
+                {
+                    return ("Ngày sinh không được bỏ trống. Xin vui lòng kiểm tra lại!");
+                }
+
+                if (!string.IsNullOrEmpty(kh.DiaChi) && kh.DiaChi.Length > 50)
+                {
+                    return ("Địa chỉ khách hàng không được vượt quá 50 ký tự. Xin vui lòng kiểm tra lại!");
+                }
+
+                return "Cập nhật dữ liệu khách hàng thành công!";
+            }
+            catch (Exception ex)
+            {
+                string strMessErr = "Lỗi trong quá trình kiểm tra thông tin cập nhật nhân viên trên UI";
+                throw new Exception(strMessErr, ex);
+            }
+        }
+
+        #endregion
     }
 }
