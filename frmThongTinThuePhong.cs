@@ -234,5 +234,10 @@ namespace DoAn_QuanLiKhachSan
                 btn_Sua.Enabled = false;
             }
         }
+
+        private void tableLayoutPanel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
