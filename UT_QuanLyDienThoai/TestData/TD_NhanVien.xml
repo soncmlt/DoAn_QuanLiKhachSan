@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListData>
+  <TC_NhanVienSDTNho>
+    <sdt>0703051</sdt>
+    <hoten>Test CMND</hoten>
+    <chucvu>1</chucvu>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <gioitinh>Nữ</gioitinh>
+    <diachi>Hà Nội</diachi>
+    <matkhau>222</matkhau>
+  </TC_NhanVienSDTNho>
+  <TC_NhanVienSDTRong>
+    <sdt></sdt>
+    <hoten>Test CMND</hoten>
+    <chucvu>1</chucvu>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <gioitinh>Nữ</gioitinh>
+    <diachi>Hà Nội</diachi>
+    <matkhau>222</matkhau>
+  </TC_NhanVienSDTRong>
+  <TC_NhanVienSDTKyTuDB>
+    <sdt>09u**8382u</sdt>
+    <hoten>Test CMND</hoten>
+    <chucvu>1</chucvu>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <gioitinh>Nữ</gioitinh>
+    <diachi>Hà Nội</diachi>
+    <matkhau>222</matkhau>
+  </TC_NhanVienSDTKyTuDB>>
+  <TC_NhanVienSDTLon>
+    <sdt>090987667898</sdt>
+    <hoten>Test CMND</hoten>
+    <chucvu>1</chucvu>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <gioitinh>Nữ</gioitinh>
+    <diachi>Hà Nội</diachi>
+    <matkhau>222</matkhau>
+  </TC_NhanVienSDTLon>
+  <TC_NhanVienTenKyTuDB>
+    <sdt>0909876678</sdt>
+    <hoten>Test CMND*#%kf00</hoten>
+    <chucvu>1</chucvu>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <gioitinh>Nữ</gioitinh>
+    <diachi>Hà Nội</diachi>
+    <matkhau>222</matkhau>
+  </TC_NhanVienTenKyTuDB>
+</ListData>

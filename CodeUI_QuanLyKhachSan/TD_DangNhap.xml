@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListData>
+  <TC_KiemTraDangNhap>
+    <tendn>0703051386</tendn>
+    <matkhau>1</matkhau>
+  </TC_KiemTraDangNhap>
+  <TC_KiemTraDangNhap>
+    <tendn>07030513</tendn>
+    <matkhau>1</matkhau>
+  </TC_KiemTraDangNhap>
+  <TC_KiemTraDangNhap>
+    <tendn>0703051386</tendn>
+    <matkhau>1dsd</matkhau>
+  </TC_KiemTraDangNhap>
+  <TC_KiemTraDangNhap>
+    <tendn>0703051386aaaaaa</tendn>
+    <matkhau>1dsdaaaaaaads</matkhau>
+  </TC_KiemTraDangNhap>
+  <TC_KiemTraDangNhap>
+    <tendn>52317@`##</tendn>
+    <matkhau>12345</matkhau>
+  </TC_KiemTraDangNhap>
+  <TC_KiemTraDangNhap>
+    <tendn></tendn>
+    <matkhau></matkhau>
+  </TC_KiemTraDangNhap>
+</ListData>

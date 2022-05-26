@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListData>
+  <UT_ThemCaseCMNDTonTai>
+    <hoten>Test CMND</hoten>
+    <cmnd>261610133</cmnd>
+    <sdt>0703051389</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseCMNDTonTai>
+  <UT_ThemCaseSDTNhoHon>
+    <hoten>Test CMND</hoten>
+    <cmnd>261610134</cmnd>
+    <sdt>070305</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseSDTNhoHon>
+  <UT_ThemCaseSDTRong>
+    <hoten>Test CMND</hoten>
+    <cmnd>261610135</cmnd>
+    <sdt></sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseSDTRong>
+  <UT_ThemCaseNgaySinhRong>
+    <hoten>Test CMND</hoten>
+    <cmnd>261610135</cmnd>
+    <sdt>0909090909</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh></ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseNgaySinhRong>
+  <UT_ThemCaseTenRong>
+    <hoten></hoten>
+    <cmnd>261610135</cmnd>
+    <sdt>0909090909</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseTenRong>
+  <UT_ThemCaseDiaChiHon50>
+    <hoten>Test Data</hoten>
+    <cmnd>261610135</cmnd>
+    <sdt>0909090909</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <diachi>Hà Nộixxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</diachi>
+  </UT_ThemCaseDiaChiHon50>
+  <UT_ThemCaseTenKyTuDB>
+    <hoten>T@ %88uan H99*</hoten>
+    <cmnd>261610135</cmnd>
+    <sdt>0909090909</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseTenKyTuDB>
+  <UT_ThemCasePass>
+    <hoten>Tran Vy</hoten>
+    <cmnd>261610135</cmnd>
+    <sdt>0909090909</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2000</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCasePass>
+  <UT_ThemCaseNgaySinhKhongHople>
+    <hoten>Tran Vy</hoten>
+    <cmnd>261610135</cmnd>
+    <sdt>0909090909</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2022</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseNgaySinhKhongHople>
+  <UT_ThemCaseCMNDKhongHople>
+    <hoten>Tran Vy</hoten>
+    <cmnd>222$kfkaaf</cmnd>
+    <sdt>0909090909</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2022</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_ThemCaseCMNDKhongHople>
+  <UT_SuaCaseDTHople1>
+    <hoten>Tran Vy</hoten>
+    <cmnd>261610135</cmnd>
+    <sdt>09090909091111111</sdt>
+    <gioitinh>Nữ</gioitinh>
+    <ngaysinh>12/10/2022</ngaysinh>
+    <diachi>Hà Nội</diachi>
+  </UT_SuaCaseDTHople1>
+</ListData>
