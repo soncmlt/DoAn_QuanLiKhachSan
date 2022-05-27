@@ -69,6 +69,12 @@
   <ItemGroup>
     <Content Include="TD_DangNhap.xml" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DoAn_QuanLiKhachSan.csproj">
+      <Project>{33c6ea20-10ff-4fe6-88a5-2b6a18d2a7f5}</Project>
+      <Name>DoAn_QuanLiKhachSan</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
