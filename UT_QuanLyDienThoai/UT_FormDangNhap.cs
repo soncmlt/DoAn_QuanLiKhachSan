@@ -67,7 +67,7 @@ namespace UT_QuanLyDienThoai
             XmlElement element;
             string filename;
             document = new XmlDocument();
-            filename = "D:\\Works\\UT_QuanLyDienThoai\\TestData\\TD_DangNhap.xml";
+            filename = "..\\..\\TestData\\TD_DangNhap.xml";
             document.Load(filename);
             element = document.DocumentElement;
             // read  xml
@@ -155,7 +155,7 @@ namespace UT_QuanLyDienThoai
             var mk = lstData[1];
 
             string result = NV.TestDangNhap(tdn, mk);
-            string expectedResult = "Tên đăng nhập hoặc Mật khẩu không được chứa ký tự đặc biệt. Xin vui lòng kiển tra lại!";
+            string expectedResult = "Tên đăng nhập hoặc Mật khẩu không đúng. Xin vui lòng kiển tra lại!";
 
             Assert.AreEqual(expectedResult, result, "FAILED");
         }
