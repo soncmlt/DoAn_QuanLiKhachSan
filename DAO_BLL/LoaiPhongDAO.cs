@@ -7,7 +7,7 @@ using BO;
 
 namespace DAO_BLL
 {
-    public class LoaiPhongDAO
+    public class LoaiPhongDAO 
     {
         DataQLKhachSanDataContext dataContext = new DataQLKhachSanDataContext();
         #region Methods
@@ -87,6 +87,55 @@ namespace DAO_BLL
                 return false;
             }
         }
+        #endregion
+
+        #region TestMethod
+        //public string TestThemPhong (LoaiPhongBO loai, string tenPhong, string loaiGiuong)
+        //{
+        //    try
+        //    {
+        //        int intSoGiuong = -1;
+        //        int intPriceHoure = -1;
+        //        int intPriceDay = -1;
+        //        int intPriceMonth = -1;
+        //        if (string.IsNullOrEmpty(loai.TenLoai) || string.IsNullOrEmpty(loai.SoGiuong))
+        //        {
+        //            MessageBox.Show("Dữ liệu thêm mới không được bỏ trống. Xin vui lòng kiểm tra lại!");
+        //            return;
+        //        }
+        //        else if (!int.TryParse(txt_soGiuong.Text.Trim(), out intSoGiuong))
+        //        {
+        //            MessageBox.Show("Số giường phải là kiểu số nguyên > 0. Xin vui lòng kiểm tra lại!");
+        //            return;
+        //        }
+        //        else if (string.IsNullOrEmpty(txt_GiaGio.Text.Trim()) || string.IsNullOrEmpty(txt_GiaNgay.Text.Trim()) || string.IsNullOrEmpty(txt_GiaThang.Text.Trim()))
+        //        {
+        //            MessageBox.Show("Thông tin về giá không được bỏ trống. Xin vui lòng kiểm tra lại!");
+        //            return;
+        //        }
+        //        else
+        //        {
+        //            intPriceHoure = int.Parse(txt_GiaGio.Text.Trim());
+        //            intPriceDay = int.Parse(txt_GiaNgay.Text.Trim());
+        //            intPriceMonth = int.Parse(txt_GiaThang.Text.Trim());
+        //            if (objLoaiPhongDAO.Insert(txt_tenLoai.Text, intSoGiuong, intPriceHoure, intPriceDay, intPriceMonth))
+        //            {
+        //                MessageBox.Show("Thêm loại phòng thành công!");
+        //                LoadTypeRoom();
+        //                CheckDataTypeRooome();
+        //            }
+        //            else
+        //            {
+        //                MessageBox.Show("Thêm loại phòng thất bại!");
+        //            }
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        string strMessErr = "Lỗi trong quá trình thêm loại phòng trên UI";
+        //        throw new Exception(strMessErr, ex);
+        //    }
+        //}
         #endregion
     }
 }

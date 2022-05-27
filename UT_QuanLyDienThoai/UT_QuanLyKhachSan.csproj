@@ -54,6 +54,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UT_FormKhachHang.cs" />
     <Compile Include="UT_FormNhanVien.cs" />
+    <Compile Include="UT_FormThemPhong.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -62,6 +63,7 @@
     <Content Include="TestData\TD_KhachHang.xml" />
     <Content Include="TestData\TD_DangNhap.xml" />
     <Content Include="TestData\TD_NhanVien.xml" />
+    <Content Include="TestData\TD_ThemPhong.xml" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\doankiemdinh\BO\BO.csproj">

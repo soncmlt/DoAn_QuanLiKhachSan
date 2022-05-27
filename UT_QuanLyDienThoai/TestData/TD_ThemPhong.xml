@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListData>
+  <TC_ThemPhong>
+    <tenloai>Phòng 6</tenloai>
+    <sogiuong>6</sogiuong>
+    <gg>100000</gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhong>
+  <TC_ThemPhongTrungTenLoai>
+    <tenloai>Phòng 6</tenloai>
+    <sogiuong>6</sogiuong>
+    <gg>100000</gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongTrungTenLoai>
+  <TC_ThemPhongTrongTenPhong>
+    <tenloai></tenloai>
+    <sogiuong>6</sogiuong>
+    <gg>100000</gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongTrongTenPhong>
+  <TC_ThemPhongTenLoaiHon>
+    <tenloai>Phòng 6nnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn</tenloai>
+    <sogiuong>6</sogiuong>
+    <gg>100000</gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongTenLoaiHon>
+  <TC_ThemPhongSoGiuong>
+    <tenloai>Phòng Test 1</tenloai>
+    <sogiuong>hhh</sogiuong>
+    <gg>100000</gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongSoGiuong>
+  <TC_ThemPhongTrongSoGiuong>
+    <tenloai>Phòng Test 1</tenloai>
+    <sogiuong></sogiuong>
+    <gg>100000</gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongTrongSoGiuong>
+  <TC_ThemPhongTrongGiaGio>
+    <tenloai>Phòng Test 1</tenloai>
+    <sogiuong>2</sogiuong>
+    <gg></gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongTrongGiaGio>
+  <TC_ThemPhongTrongGiaNgay>
+    <tenloai>Phòng Test 1</tenloai>
+    <sogiuong>2</sogiuong>
+    <gg>800000</gg>
+    <gn></gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongTrongGiaNgay>
+  <TC_ThemPhongTenLoaiKyTuDB>
+    <tenloai>Phòng Đơn*%%##%$$%$</tenloai>
+    <sogiuong>7</sogiuong>
+    <gg>100000</gg>
+    <gn>800000</gn>
+    <gt>18000000</gt>
+    <tp>Phòng 6 Giường</tp>
+  </TC_ThemPhongTenLoaiKyTuDB>
+</ListData>
