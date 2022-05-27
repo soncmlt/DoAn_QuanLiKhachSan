@@ -196,6 +196,34 @@ namespace CodeUI_QuanLyKhachSan
             Mouse.Click(uIOKButton, new Point(70, 13));
         }
         
+        /// <summary>
+        /// RecordedMethodThemChucVu1 - Use 'RecordedMethodThemChucVu1Params' to pass parameters into this method.
+        /// </summary>
+        public void RecordedMethodThemChucVu1()
+        {
+            #region Variable Declarations
+            //WinWindow uIBaoveWindow = this.UIQUẢNLÍKHÁCHSẠNWindow.UIQuảnlíthôngtinnhânviWindow.UITxt_tenChucVuEdit.UIBaoveWindow;
+            WinEdit uIItemEdit = this.UIQUẢNLÍKHÁCHSẠNWindow.UIQuảnlíthôngtinnhânviWindow.UITxt_tenChucVuEdit.UIItemEdit;
+            WinButton uIThêmButton = this.UIQUẢNLÍKHÁCHSẠNWindow.UIQuảnlíthôngtinnhânviWindow.UITableLayoutPanel3Window.UIThêmButton;
+            WinButton uIOKButton = this.UIOKWindow.UIOKButton;
+            #endregion
+
+            // Click 'Bao ve' window
+            //Mouse.Click(uIBaoveWindow, new Point(160, 122));
+
+            // Type 'Nhan vien thu ngan' in text box
+            uIItemEdit.Text = this.RecordedMethodThemChucVu1Params.UIItemEditText;
+
+            // Type '{Tab}' in text box
+            Keyboard.SendKeys(uIItemEdit, this.RecordedMethodThemChucVu1Params.UIItemEditSendKeys, ModifierKeys.None);
+
+            // Type '{Enter}' in 'Thêm' button
+            Keyboard.SendKeys(uIThêmButton, this.RecordedMethodThemChucVu1Params.UIThêmButtonSendKeys, ModifierKeys.None);
+
+            // Type '{Enter}' in 'OK' button
+            Keyboard.SendKeys(uIOKButton, this.RecordedMethodThemChucVu1Params.UIOKButtonSendKeys, ModifierKeys.None);
+        }
+        
         #region Properties
         public virtual RecordedMethodThanhToanParams RecordedMethodThanhToanParams
         {
@@ -257,6 +285,18 @@ namespace CodeUI_QuanLyKhachSan
             }
         }
         
+        public virtual RecordedMethodThemChucVu1Params RecordedMethodThemChucVu1Params
+        {
+            get
+            {
+                if ((this.mRecordedMethodThemChucVu1Params == null))
+                {
+                    this.mRecordedMethodThemChucVu1Params = new RecordedMethodThemChucVu1Params();
+                }
+                return this.mRecordedMethodThemChucVu1Params;
+            }
+        }
+        
         public UIQUẢNLÍKHÁCHSẠNWindow UIQUẢNLÍKHÁCHSẠNWindow
         {
             get
@@ -304,6 +344,8 @@ namespace CodeUI_QuanLyKhachSan
         private RecordedMethodThemChucVuParams mRecordedMethodThemChucVuParams;
         
         private RecordedMethodThemPhongParams mRecordedMethodThemPhongParams;
+        
+        private RecordedMethodThemChucVu1Params mRecordedMethodThemChucVu1Params;
         
         private UIQUẢNLÍKHÁCHSẠNWindow mUIQUẢNLÍKHÁCHSẠNWindow;
         
@@ -480,6 +522,36 @@ namespace CodeUI_QuanLyKhachSan
         /// Type '7000000' in text box
         /// </summary>
         public string UIItemEditText4 = "7000000";
+        #endregion
+    }
+    
+    /// <summary>
+    /// Parameters to be passed into 'RecordedMethodThemChucVu1'
+    /// </summary>
+    [GeneratedCode("Coded UITest Builder", "11.0.50727.1")]
+    public class RecordedMethodThemChucVu1Params
+    {
+        
+        #region Fields
+        /// <summary>
+        /// Type 'Nhan vien thu ngan' in text box
+        /// </summary>
+        public string UIItemEditText = "Nhan vien thu ngan";
+        
+        /// <summary>
+        /// Type '{Tab}' in text box
+        /// </summary>
+        public string UIItemEditSendKeys = "{Tab}";
+        
+        /// <summary>
+        /// Type '{Enter}' in 'Thêm' button
+        /// </summary>
+        public string UIThêmButtonSendKeys = "{Enter}";
+        
+        /// <summary>
+        /// Type '{Enter}' in 'OK' button
+        /// </summary>
+        public string UIOKButtonSendKeys = "{Enter}";
         #endregion
     }
     
@@ -817,10 +889,29 @@ namespace CodeUI_QuanLyKhachSan
                 return this.mUIItemEdit;
             }
         }
+        
+        public WinWindow UIBaoveWindow
+        {
+            get
+            {
+                if ((this.mUIBaoveWindow == null))
+                {
+                    this.mUIBaoveWindow = new WinWindow(this);
+                    #region Search Criteria
+                    this.mUIBaoveWindow.SearchProperties[WinWindow.PropertyNames.Name] = "Bao ve";
+                    this.mUIBaoveWindow.SearchProperties.Add(new PropertyExpression(WinWindow.PropertyNames.ClassName, "WindowsForms10.EDIT", PropertyExpressionOperator.Contains));
+                    this.mUIBaoveWindow.WindowTitles.Add("QUẢN LÍ KHÁCH SẠN");
+                    #endregion
+                }
+                return this.mUIBaoveWindow;
+            }
+        }
         #endregion
         
         #region Fields
         private WinEdit mUIItemEdit;
+        
+        private WinWindow mUIBaoveWindow;
         #endregion
     }
     
