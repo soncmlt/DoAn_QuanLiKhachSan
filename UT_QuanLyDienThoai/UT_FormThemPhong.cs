@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using DAO_BLL;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +13,7 @@ namespace UT_QuanLyDienThoai
     [TestClass]
     public class UT_FormThemPhong
     {
+        LoaiPhongDAO LP = new LoaiPhongDAO();
         public UT_FormThemPhong()
         {
             //
@@ -92,6 +94,133 @@ namespace UT_QuanLyDienThoai
 
             var listData = GetDataTest("TC_ThemPhong");
 
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Thêm loại phòng thành công!";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        
+        [TestMethod]
+        public void TC_ThemPhongTrungTenLoai()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongTrungTenLoai");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Thêm loại phòng thất bại!";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        [TestMethod]
+        public void TC_ThemPhongTrongTenPhong()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongTrongTenPhong");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Dữ liệu thêm mới không được bỏ trống. Xin vui lòng kiểm tra lại!";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        
+        [TestMethod]
+        public void TC_ThemPhongTenLoaiHon()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongTenLoaiHon");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Tên Loại Phòng vượt quá";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        [TestMethod]
+        public void TC_ThemPhongSoGiuong()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongSoGiuong");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Số giường phải là kiểu số nguyên > 0. Xin vui lòng kiểm tra lại!";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        [TestMethod]
+        public void TC_ThemPhongTrongSoGiuong()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongTrongSoGiuong");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Dữ liệu thêm mới không được bỏ trống. Xin vui lòng kiểm tra lại!";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        [TestMethod]
+        public void TC_ThemPhongTrongGiaGio()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongTrongGiaGio");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Thông tin về giá không được bỏ trống. Xin vui lòng kiểm tra lại!";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        [TestMethod]
+        public void TC_ThemPhongTrongGiaNgay()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongTrongGiaNgay");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Thông tin về giá không được bỏ trống. Xin vui lòng kiểm tra lại!";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
+        }
+        [TestMethod]
+        public void TC_ThemPhongTenLoaiKyTuDB()
+        {
+            //
+            // TODO: Add test logic here
+            //
+
+            var listData = GetDataTest("TC_ThemPhongTenLoaiKyTuDB");
+
+            var result = LP.TestThemPhong(listData[0], listData[5], listData[2], listData[3], listData[4], listData[1]);
+
+            var expectedResult = "Tên Phòng không được chứa ký tự đặc biệt";
+
+            Assert.AreEqual(expectedResult, result, "PASS");
         }
     }
 }
