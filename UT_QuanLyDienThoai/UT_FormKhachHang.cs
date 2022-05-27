@@ -124,7 +124,7 @@ namespace UT_QuanLyDienThoai
             // TODO: Add test logic here
             //
 
-            var listData = GetDataTest("UT_ThemCaseCMNDTonTai");
+            var listData = GetDataTest("UT_ThemCaseSDTNhoHon");
             KhachHangBO kh = new KhachHangBO()
             {
                 TenKH = listData[0],

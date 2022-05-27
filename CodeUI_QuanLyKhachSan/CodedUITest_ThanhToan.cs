@@ -42,7 +42,7 @@ namespace CodeUI_QuanLyKhachSan
         }
 
         [TestMethod]
-        public void CodedUITestMethodThanhToan()
+        public void CodedUITestMethodDangNhap()
         {
             try
             {
@@ -56,7 +56,6 @@ namespace CodeUI_QuanLyKhachSan
 
                     this.UIMap.RecordedMethodDangNhap1();
                 }
-                
             }
             catch (Exception ex)
             {
@@ -73,7 +72,7 @@ namespace CodeUI_QuanLyKhachSan
 
 
         [TestMethod]
-        public void CodedUITestMethodDangNhap()
+        public void CodedUITestMethodDangNhap1()
         {
             this.UIMap.RecordedMethodDangNhap1();
 

@@ -88,9 +88,9 @@ namespace CodeUI_QuanLyKhachSan
             uITxtUserNameEdit.Text = this.RecordedMethodDangNhap1Params.UITxtUserNameEditText;
 
             // Move 'txtPass' window to 'pictureBox3' window
-            uIPictureBox3Window.EnsureClickable(new Point(114, 134));
-            Mouse.StartDragging(uITxtPassWindow, new Point(115, 139));
-            Mouse.StopDragging(uIPictureBox3Window, new Point(114, 134));
+            //uIPictureBox3Window.EnsureClickable(new Point(114, 134));
+            //Mouse.StartDragging(uITxtPassWindow, new Point(115, 139));
+            //Mouse.StopDragging(uIPictureBox3Window, new Point(114, 134));
 
             // Type '********' in 'txtPass' text box
             Keyboard.SendKeys(uITxtPassEdit, this.RecordedMethodDangNhap1Params.UITxtPassEditSendKeys, true);
