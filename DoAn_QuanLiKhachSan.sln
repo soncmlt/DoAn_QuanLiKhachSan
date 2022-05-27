@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UT_QuanLyKhachSan", "UT_Qua
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeUI_QuanLyKhachSan", "CodeUI_QuanLyKhachSan\CodeUI_QuanLyKhachSan.csproj", "{73B9364C-7C38-41C4-ABEA-EB3CEA162509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject2", "..\UnitTestProject2\UnitTestProject2.csproj", "{5A341091-098B-4BEE-82FE-0B5E677FD7F4}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,10 +37,6 @@ Global
 		{73B9364C-7C38-41C4-ABEA-EB3CEA162509}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73B9364C-7C38-41C4-ABEA-EB3CEA162509}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73B9364C-7C38-41C4-ABEA-EB3CEA162509}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A341091-098B-4BEE-82FE-0B5E677FD7F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A341091-098B-4BEE-82FE-0B5E677FD7F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A341091-098B-4BEE-82FE-0B5E677FD7F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A341091-098B-4BEE-82FE-0B5E677FD7F4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -68,7 +68,7 @@ namespace UT_QuanLyDienThoai
             XmlElement element;
             string filename;
             document = new XmlDocument();
-            filename = "D:\\Works\\UT_QuanLyDienThoai\\TestData\\TD_NhanVien.xml";
+            filename = "..\\..\\TestData\\TD_NhanVien.xml";
             document.Load(filename);
             element = document.DocumentElement;
             // read  xml

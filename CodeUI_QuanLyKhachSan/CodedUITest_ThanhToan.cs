@@ -6,11 +6,10 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Xml; 
+using System.Xml;
 using Microsoft.VisualStudio.TestTools.UITesting;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Microsoft.VisualStudio.TestTools.UITest.Extension;
-using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;
+using Microsoft.VisualStudio.TestTools.UnitTesting; 
+
 
 
 namespace CodeUI_QuanLyKhachSan
@@ -28,7 +27,7 @@ namespace CodeUI_QuanLyKhachSan
         public List<string> GetDataTest()
         {
             XmlDataDocument doc = new XmlDataDocument();
-            doc.Load("D:\\Works\\CodeUI_QuanLyKhachSan\\TD_DangNhap.xml");
+            doc.Load("..\\..\\..\\CodeUI_QuanLyKhachSan\\TD_DangNhap.xml");
 
             XmlNodeList elements = doc.GetElementsByTagName("TC_KiemTraDangNhap");
             List<string> rs = new List<string>();
@@ -113,7 +112,7 @@ namespace CodeUI_QuanLyKhachSan
 
         [TestMethod]
         [DataSource("Microsoft.VisualStudio.TestTools.DataSource.XML",
-            "|DataDirectory|\\TD_DangNhap.xml", "TC_KiemTraDangNhap", DataAccessMethod.Sequential)]
+            "|DataDirectory|TD_DangNhap.xml", "TC_KiemTraDangNhap", DataAccessMethod.Sequential)]
         public void CodedUITestMethodThem1Phim2()
         {
             this.UIMap.RecordedMethodDangNhap1Params.UITxtUserNameEditText = this.TestContext.DataRow["tendn"].ToString();
