@@ -28,6 +28,7 @@ namespace DoAn_QuanLiKhachSan
             List<PhongBO> lstPhong = new List<PhongBO>();
             lstPhong = objPhongDAO.LoadMenuRoom();
             int soluong = lstPhong.Count();
+            trv_DSTenPhong.Nodes.Clear();
             for (int i = 0; i < lstPhong.Count(); i++)
             {
                 TreeNode node = new TreeNode(lstPhong[i].TenPhong);
@@ -75,6 +76,7 @@ namespace DoAn_QuanLiKhachSan
             List<PhongBO> lstPhong = new List<PhongBO>();
             lstPhong = objPhongDAO.LoadMenuRoom();
             int soluong = lstPhong.Count();
+            trv_DSTenPhong.Nodes.Clear();
             for (int i = 0; i < lstPhong.Count(); i++)
             {
                 TreeNode node = new TreeNode(lstPhong[i].TenPhong);

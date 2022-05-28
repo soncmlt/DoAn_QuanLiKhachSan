@@ -20,6 +20,8 @@ namespace DAO_BLL
                 dataContext.tbl_HoaDons.InsertOnSubmit(model);
                 var objPT = dataContext.tbl_PhieuThues.Where(x => x.MaPhieuThue == model.MaPhieuThue).FirstOrDefault();
                 objPT.TinhTrang = true;
+                var objPhong = dataContext.tbl_Phongs.Where(x => x.MaPhong == model.MaPhong).FirstOrDefault();
+                objPhong.TinhTrang = "Chưa thuê";
                 dataContext.SubmitChanges();
                 return true;
             }

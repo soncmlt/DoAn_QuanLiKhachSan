@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO_BLL", "DAO_BLL\DAO_BLL.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "BO\BO.csproj", "{E0953F92-0066-4519-B8CB-00A2A3ED219B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UT_QuanLyKhachSan", "..\UT_QuanLyDienThoai\UT_QuanLyKhachSan.csproj", "{B8EA1B49-3938-4094-8D4C-C641D1433C73}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UT_QuanLyKhachSan", "UT_QuanLyDienThoai\UT_QuanLyKhachSan.csproj", "{B8EA1B49-3938-4094-8D4C-C641D1433C73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeUI_QuanLyKhachSan", "..\CodeUI_QuanLyKhachSan\CodeUI_QuanLyKhachSan.csproj", "{73B9364C-7C38-41C4-ABEA-EB3CEA162509}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeUI_QuanLyKhachSan", "CodeUI_QuanLyKhachSan\CodeUI_QuanLyKhachSan.csproj", "{73B9364C-7C38-41C4-ABEA-EB3CEA162509}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
