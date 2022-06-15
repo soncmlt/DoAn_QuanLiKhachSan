@@ -279,8 +279,6 @@ namespace DAO_BLL
 		
 		private string _TinhTrang;
 		
-		private EntitySet<tbl_PhieuThue> _tbl_PhieuThues;
-		
 		private EntityRef<tbl_LoaiPhong> _tbl_LoaiPhong;
 		
     #region Extensibility Method Definitions
@@ -299,7 +297,6 @@ namespace DAO_BLL
 		
 		public tbl_Phong()
 		{
-			this._tbl_PhieuThues = new EntitySet<tbl_PhieuThue>(new Action<tbl_PhieuThue>(this.attach_tbl_PhieuThues), new Action<tbl_PhieuThue>(this.detach_tbl_PhieuThues));
 			this._tbl_LoaiPhong = default(EntityRef<tbl_LoaiPhong>);
 			OnCreated();
 		}
@@ -388,19 +385,6 @@ namespace DAO_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_Phong_tbl_PhieuThue", Storage="_tbl_PhieuThues", ThisKey="MaPhong", OtherKey="MaPhong")]
-		public EntitySet<tbl_PhieuThue> tbl_PhieuThues
-		{
-			get
-			{
-				return this._tbl_PhieuThues;
-			}
-			set
-			{
-				this._tbl_PhieuThues.Assign(value);
-			}
-		}
-		
 		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_LoaiPhong_tbl_Phong", Storage="_tbl_LoaiPhong", ThisKey="MaLoaiPhong", OtherKey="MaLoaiPhong", IsForeignKey=true)]
 		public tbl_LoaiPhong tbl_LoaiPhong
 		{
@@ -453,18 +437,6 @@ namespace DAO_BLL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_tbl_PhieuThues(tbl_PhieuThue entity)
-		{
-			this.SendPropertyChanging();
-			entity.tbl_Phong = this;
-		}
-		
-		private void detach_tbl_PhieuThues(tbl_PhieuThue entity)
-		{
-			this.SendPropertyChanging();
-			entity.tbl_Phong = null;
 		}
 	}
 	
@@ -781,8 +753,6 @@ namespace DAO_BLL
 		
 		private string _DiaChi;
 		
-		private EntitySet<tbl_PhieuThue> _tbl_PhieuThues;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -803,7 +773,6 @@ namespace DAO_BLL
 		
 		public tbl_KhachHang()
 		{
-			this._tbl_PhieuThues = new EntitySet<tbl_PhieuThue>(new Action<tbl_PhieuThue>(this.attach_tbl_PhieuThues), new Action<tbl_PhieuThue>(this.detach_tbl_PhieuThues));
 			OnCreated();
 		}
 		
@@ -927,19 +896,6 @@ namespace DAO_BLL
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_KhachHang_tbl_PhieuThue", Storage="_tbl_PhieuThues", ThisKey="MaKH", OtherKey="MaKH")]
-		public EntitySet<tbl_PhieuThue> tbl_PhieuThues
-		{
-			get
-			{
-				return this._tbl_PhieuThues;
-			}
-			set
-			{
-				this._tbl_PhieuThues.Assign(value);
-			}
-		}
-		
 		public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
@@ -958,18 +914,6 @@ namespace DAO_BLL
 			{
 				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
 			}
-		}
-		
-		private void attach_tbl_PhieuThues(tbl_PhieuThue entity)
-		{
-			this.SendPropertyChanging();
-			entity.tbl_KhachHang = this;
-		}
-		
-		private void detach_tbl_PhieuThues(tbl_PhieuThue entity)
-		{
-			this.SendPropertyChanging();
-			entity.tbl_KhachHang = null;
 		}
 	}
 	
@@ -1566,10 +1510,6 @@ namespace DAO_BLL
 		
 		private EntityRef<tbl_HinhThuc> _tbl_HinhThuc;
 		
-		private EntityRef<tbl_KhachHang> _tbl_KhachHang;
-		
-		private EntityRef<tbl_Phong> _tbl_Phong;
-		
     #region Extensibility Method Definitions
     partial void OnLoaded();
     partial void OnValidate(System.Data.Linq.ChangeAction action);
@@ -1592,8 +1532,6 @@ namespace DAO_BLL
 		{
 			this._tbl_HoaDons = new EntitySet<tbl_HoaDon>(new Action<tbl_HoaDon>(this.attach_tbl_HoaDons), new Action<tbl_HoaDon>(this.detach_tbl_HoaDons));
 			this._tbl_HinhThuc = default(EntityRef<tbl_HinhThuc>);
-			this._tbl_KhachHang = default(EntityRef<tbl_KhachHang>);
-			this._tbl_Phong = default(EntityRef<tbl_Phong>);
 			OnCreated();
 		}
 		
@@ -1628,10 +1566,6 @@ namespace DAO_BLL
 			{
 				if ((this._MaPhong != value))
 				{
-					if (this._tbl_Phong.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMaPhongChanging(value);
 					this.SendPropertyChanging();
 					this._MaPhong = value;
@@ -1716,10 +1650,6 @@ namespace DAO_BLL
 			{
 				if ((this._MaKH != value))
 				{
-					if (this._tbl_KhachHang.HasLoadedOrAssignedValue)
-					{
-						throw new System.Data.Linq.ForeignKeyReferenceAlreadyHasValueException();
-					}
 					this.OnMaKHChanging(value);
 					this.SendPropertyChanging();
 					this._MaKH = value;
@@ -1772,74 +1702,6 @@ namespace DAO_BLL
 						this._MaHinhThuc = default(int);
 					}
 					this.SendPropertyChanged("tbl_HinhThuc");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_KhachHang_tbl_PhieuThue", Storage="_tbl_KhachHang", ThisKey="MaKH", OtherKey="MaKH", IsForeignKey=true)]
-		public tbl_KhachHang tbl_KhachHang
-		{
-			get
-			{
-				return this._tbl_KhachHang.Entity;
-			}
-			set
-			{
-				tbl_KhachHang previousValue = this._tbl_KhachHang.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_KhachHang.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_KhachHang.Entity = null;
-						previousValue.tbl_PhieuThues.Remove(this);
-					}
-					this._tbl_KhachHang.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_PhieuThues.Add(this);
-						this._MaKH = value.MaKH;
-					}
-					else
-					{
-						this._MaKH = default(string);
-					}
-					this.SendPropertyChanged("tbl_KhachHang");
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="tbl_Phong_tbl_PhieuThue", Storage="_tbl_Phong", ThisKey="MaPhong", OtherKey="MaPhong", IsForeignKey=true)]
-		public tbl_Phong tbl_Phong
-		{
-			get
-			{
-				return this._tbl_Phong.Entity;
-			}
-			set
-			{
-				tbl_Phong previousValue = this._tbl_Phong.Entity;
-				if (((previousValue != value) 
-							|| (this._tbl_Phong.HasLoadedOrAssignedValue == false)))
-				{
-					this.SendPropertyChanging();
-					if ((previousValue != null))
-					{
-						this._tbl_Phong.Entity = null;
-						previousValue.tbl_PhieuThues.Remove(this);
-					}
-					this._tbl_Phong.Entity = value;
-					if ((value != null))
-					{
-						value.tbl_PhieuThues.Add(this);
-						this._MaPhong = value.MaPhong;
-					}
-					else
-					{
-						this._MaPhong = default(int);
-					}
-					this.SendPropertyChanged("tbl_Phong");
 				}
 			}
 		}

@@ -70,9 +70,9 @@ Create Table tbl_PhieuThue
 	NgayDat DateTime,
 	TinhTrang bit, /*Có thể xét true fale cho trường hợp chưa thanh toán và đã thanh toán*/
 	MaKH Char(10) not null,
-	Constraint "FK_Phong_PhieuThue" foreign key (MaPhong) references  tbl_Phong(MaPhong),
+	/*Constraint "FK_Phong_PhieuThue" foreign key (MaPhong) references  tbl_Phong(MaPhong),*/
 	Constraint "FK_HinhThuc_PhieuThue" foreign key (MaHinhThuc) references  tbl_HinhThuc(MaHinhThuc),
-	Constraint "FK_KhachHang_PhieuThue" foreign key (MaKH) references  tbl_KhachHang(MaKH)
+	/*Constraint "FK_KhachHang_PhieuThue" foreign key (MaKH) references  tbl_KhachHang(MaKH)*/
 );
 
 Create Table tbl_HoaDon
@@ -108,3 +108,7 @@ insert into tbl_HinhThuc values (3, N'Thuê theo tháng');
 --Không cần thiết
 Insert into tbl_LoaiPhong Values (N'Phòng Đơn', 1, 30000, 300000, 1500000);
 Insert into tbl_Phong Values (N'Phòng Sơn Tạo', 1, N'Chưa thuê');
+
+select * from tbl_NhanVien
+
+select * from tbl_PhieuThue

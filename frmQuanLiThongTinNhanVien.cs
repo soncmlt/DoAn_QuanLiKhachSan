@@ -199,6 +199,10 @@ namespace DoAn_QuanLiKhachSan
                         LoadDatadLoaiPhong();
                         CheckEnable(false);
                     }
+                    else
+                    {
+                        MessageBox.Show("Xóa chức vụ thất bại!");
+                    }
                 }
                 else
                 {

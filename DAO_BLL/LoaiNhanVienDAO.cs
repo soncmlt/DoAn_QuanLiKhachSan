@@ -53,6 +53,11 @@ namespace DAO_BLL
                 var onjCheckDB = dataContext.tbl_LoaiNhanViens.Where(x => x.MaLoaiNV == intLoaiNVId).FirstOrDefault();
                 if (onjCheckDB != null)
                 {
+                    var onjChecNV = dataContext.tbl_NhanViens.Where(x => x.MaLoaiNV == intLoaiNVId);
+                    if (onjChecNV != null)
+                    {
+                        dataContext.tbl_NhanViens.DeleteAllOnSubmit(onjChecNV);
+                    }
                     dataContext.tbl_LoaiNhanViens.DeleteOnSubmit(onjCheckDB);
                     dataContext.SubmitChanges();
                     return true;
